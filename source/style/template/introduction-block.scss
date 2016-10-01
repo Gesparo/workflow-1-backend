@@ -6,8 +6,13 @@
   opacity: .9;
   color: #455a64;
   border-radius: 8px 8px;
-  position: relative;
+  position: absolute;
   display: inline-block;
+  top: 50%;
+  left: 50%;
+
+  margin-top: -200px;
+  margin-left: -190px;
 
   &__main {
     padding: 10px;
