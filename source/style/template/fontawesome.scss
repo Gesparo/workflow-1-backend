@@ -1,0 +1,31 @@
+.fa {
+  display: inline-block;
+  font: normal normal normal 16px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &_vk:before {
+    content: "\f189";
+  }
+  &_github_alt:before {
+    content: "\f113";
+  }
+  &_linkedin:before {
+    content: "\f0e1";
+  }
+
+  &_large {
+    font-size: 30px;
+  }
+
+  &_lighter {
+    opacity: .7;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+}

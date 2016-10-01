@@ -1,5 +1,35 @@
+@import "common/fonts";
+@import "_mixins";
+
 body {
   margin: 0;
 }
 
-@import 'common/greating';
+ul {
+  padding: 0;
+  margin: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@import "template/layout-intro-skeleton";
+@import "template/header-intro.scss";
+@import "template/auth-block.scss";
+@import "template/introduction-block.scss";
+@import "template/fontawesome.scss";
+

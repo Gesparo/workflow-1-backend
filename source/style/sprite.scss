@@ -1,0 +1,107 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$abacus-name: 'abacus';
+$abacus-x: 0px;
+$abacus-y: 0px;
+$abacus-offset-x: 0px;
+$abacus-offset-y: 0px;
+$abacus-width: 512px;
+$abacus-height: 512px;
+$abacus-total-width: 1024px;
+$abacus-total-height: 512px;
+$abacus-image: 'sprite.png';
+$abacus: (0px, 0px, 0px, 0px, 512px, 512px, 1024px, 512px, 'sprite.png', 'abacus', );
+$acoustic-guitar-name: 'acoustic-guitar';
+$acoustic-guitar-x: 512px;
+$acoustic-guitar-y: 0px;
+$acoustic-guitar-offset-x: -512px;
+$acoustic-guitar-offset-y: 0px;
+$acoustic-guitar-width: 512px;
+$acoustic-guitar-height: 512px;
+$acoustic-guitar-total-width: 1024px;
+$acoustic-guitar-total-height: 512px;
+$acoustic-guitar-image: 'sprite.png';
+$acoustic-guitar: (512px, 0px, -512px, 0px, 512px, 512px, 1024px, 512px, 'sprite.png', 'acoustic-guitar', );
+$spritesheet-width: 1024px;
+$spritesheet-height: 512px;
+$spritesheet-image: 'sprite.png';
+$spritesheet-sprites: ($abacus, $acoustic-guitar, );
+$spritesheet: (1024px, 512px, 'sprite.png', $spritesheet-sprites, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.auth-block {
+  float: right;
+
+  &__button {
+    display: inline-block;
+    padding: 13px 25px;
+    border: 2px solid #fff;
+    border-radius: 7px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 500;
+  }
+}
