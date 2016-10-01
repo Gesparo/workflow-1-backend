@@ -1,0 +1,16 @@
+.large-title {
+  font-family: Bernier;
+  font-size: 63px;
+
+  &__text {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 20px;
+  }
+
+  &:before, &:after {
+    content: "-";
+    height: 100%;
+    display: inline-block;
+  }
+}
