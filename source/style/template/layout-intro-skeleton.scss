@@ -6,23 +6,6 @@ body {
   line-height: 1.42;
 }
 
-footer {
-  height: 150px; // фиксированая высота футера
-}
-
-.page {
-  min-height: 100%;
-  margin-bottom: -150px; // Равно высоте футера
-  background: url("../img/mountains1200.png") 0 0 no-repeat;
-  background-size: cover;
-}
-
-.page:after {
-  content: '';
-  display: block;
-  height: 150px; // Равно высоте футера
-}
-
 .footer-intro {
   height: 75px;
   background: transparent;
@@ -35,13 +18,15 @@ footer {
   }
 }
 
-.page {
+.page-intro {
   min-height: 100%;
   margin-bottom: -75px;
-}
+  background: url("../img/mountains1200.png") 0 0 no-repeat;
+  background-size: cover;
 
-.page:after {
-  content: '';
-  display: block;
-  height: 75px;
+  &:after {
+    content: '';
+    display: block;
+    height: 75px;
+  }
 }
