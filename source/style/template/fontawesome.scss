@@ -18,6 +18,18 @@
   &_bar:before {
     content: '\f0c9';
   }
+  &_skype:before {
+    content: '\f17e';
+  }
+  &_envelope:before {
+    content: '\f0e0';
+  }
+  &_phone:before {
+    content: '\f095';
+  }
+  &_map-marker:before {
+    content: '\f041';
+  }
 
   &_large {
     font-size: 30px;

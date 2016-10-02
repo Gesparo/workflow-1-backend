@@ -1,4 +1,6 @@
 .introduction-block {
+  $parent: &;
+
   width: 380px;
   height: 400px;
   text-align: center;
@@ -92,5 +94,18 @@
 
   &__link-text {
     font-weight: 500;
+  }
+
+  &_simpled {
+    background: transparent;
+    color: #fff;
+
+    #{$parent}__links {
+      display: none;
+    }
+
+    #{$parent}__social-block {
+      display: none;
+    }
   }
 }

@@ -1,0 +1,87 @@
+extends ../_layout
+
+block variables
+    - var title = 'About me'
+    - var mainCss = 'app'
+    - var simpled = true;
+
+block content
+    .page
+        include ../components/header.pug
+        include ../components/main-intro.pug
+
+    .main-content
+        .main-content__left-side
+            .about-me
+                header.about-me__block-title
+                    .large-title
+                        span.large-title__text Обо мне
+                .about-me__avatar-block
+                    img.about-me__avatar(src="assets/img/full-size-avatar.png")
+                .about-me__title
+                    .normal-title
+                        span.normal-title__text Кто я
+                .about-me__content
+                    p.about-me__paragraph.
+                        Я веб разработчик из Оренбурга. Мне 24 лет. Я занимаюсь разработкой современных сайтов и
+                        приложений. Мне нравится делать интересные и современные проекты.
+                    p.about-me__paragraph.
+                        Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я
+                        освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
+        .main-content__right-side
+            .skills-block
+                header.skills-block__title
+                    .normal-title
+                        span.normal-title__text Чем я могу быть Вам полезен
+                .skills-block__desc.
+                    Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи
+                    на Backend. Но давайте по порядку.
+                .skills-block__group
+                    .skills-block__group-title Frontend
+                        ul.skills-block__skills
+                            li.skills-block__skill
+                                span.skills-block__skill-text HTML 5
+                            li.skills-block__skill
+                                span.skills-block__skill-text CSS 3
+                            li.skills-block__skill
+                                span.skills-block__skill-text JavaScript & JQuery
+                .skills-block__group
+                    .skills-block__group-title Backend
+                        ul.skills-block__skills
+                            li.skills-block__skill
+                                .skills-block__skill-text PHP
+                            li.skills-block__skill
+                                .skills-block__skill-text MySQL
+                            li.skills-block__skill
+                                .skills-block__skill-text Node.js & npm
+                            li.skills-block__skill
+                                .skills-block__skill-text Mongo.db
+                .skills-block__group
+                    .skills-block__group-title Workflow
+                        ul.skills-block__skills
+                            li.skills-block__skill
+                                .skills-block__skill-text Git
+                            li.skills-block__skill
+                                .skills-block__skill-text Gulp
+                            li.skills-block__skill
+                                .skills-block__skill-text Bower
+
+    section.contacts
+        .contacts__block
+            header.contacts__title
+                .normal-title
+                    span.normal-title__text Контакты
+            ul.contacts__items
+                li.contacts__item
+                    span.contacts__icon.fa.fa_skype
+                    span.contacts__text gesparo-shmaxer
+                li.contacts__item
+                    span.contacts__icon.fa.fa_envelope
+                    span.contacts__text gesparo1@gmail.com
+                li.contacts__item
+                    span.contacts__icon.fa.fa_phone
+                    span.contacts__text +7 987 842 25 69
+                li.contacts__item
+                    span.contacts__icon.fa.fa_map-marker
+                    span.contacts__text Россия, г. Оренбург
+    include ../components/footer.pug
