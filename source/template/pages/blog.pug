@@ -6,117 +6,16 @@ block variables
 
 block content
     .page-top
-        header.page-top__header.header
-            ul.header__social-block
-                li.header__social-item
-                    a.header__social-link
-                        span.fa.fa_vk.fa_large.fa_lighter
-                li.header__social-item
-                    a.header__social-link
-                        span.fa.fa_github_alt.fa_large.fa_lighter
-                li.header__social-item
-                    a.header__social-link
-                        span.fa.fa_linkedin.fa_large.fa_lighter
-            .header__menu
-                a.header__social-link
-                    span.fa.fa_bar.fa_large.fa_lighter
-        main.page-top__main.main
-            .main__avatar-block
-                .avatar-block__img-block
-                    img.avatar-block__img(src="assets/img/avatar.png")
-            header.main__title-block.title-block
-                .large-title
-                    span.large-title__text Блог
-                .title-block__desc
-                    span.title-block__desc-text Статьи, которые я написал
+        include ../components/header.pug
+        include ../components/main.pug
 
     section.main-content
         .container
-            nav.articles-nav
-                ul.articles-nav__items
-                    li.articles-nav__item.articles-nav_active
-                        a.articles-nav__link
-                            span.articles-nav__text Самое важное в SASS
-                    li.articles-nav__item
-                        a.articles-nav__link
-                            span.articles-nav__text Приёмы в вёрстке, без которых  не обходится ни один сайт
-                    li.articles-nav__item
-                        a.articles-nav__link
-                            span.articles-nav__text Самый необходимый набор Gulp плагинов
-                    li.articles-nav__item
-                        a.articles-nav__link
-                            span.articles-nav__text Почему я выбрал Jade
+            include ../components/articles-nav.pug
 
             .articles
-                article.article
-                    h2.article__header Самое важное в SASS
-                    .article__date
-                        span.article__date-text 22 ноября 2016
-                    .article__content
-                        p.article__paragraph.
-                            Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные
-                            задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт
-                            новая модель организационной деятельности играет важную роль в формировании новых
-                            предложений. Товарищи! новая модель организационной деятельности играет важную роль в
-                            формировании систем массового участия.
-                        p.article__paragraph.
-                            Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому
-                            кругу (специалистов) участие в формировании систем массового участия. Идейные соображения
-                            высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу
-                            (специалистов) участие в формировании позиций, занимаемых участниками в отношении
-                            поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности
-                            способствует подготовки и реализации модели развития. С другой стороны рамки и место
-                            обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров,
-                            соответствует насущным потребностям.
-                article.article
-                    h2.article__header Приёмы в вёрстке, без которых не обходится  ни один сайт
-                    .article__date
-                        span.article__date-text 13 ноября 2016
-                    p.article__paragraph.
-                        Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные
-                        задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт
-                        новая модель организационной деятельности играет важную роль в формировании новых
-                        предложений. Товарищи! новая модель организационной деятельности играет важную роль в
-                        формировании систем массового участия.
-                    p.article__paragraph.
-                        Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому
-                        кругу (специалистов) участие в формировании систем массового участия. Идейные соображения
-                        высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу
-                        (специалистов) участие в формировании позиций, занимаемых участниками в отношении
-                        поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности
-                        способствует подготовки и реализации модели развития. С другой стороны рамки и место
-                        обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров,
-                        соответствует насущным потребностям.
+                include ../articles/article1.pug
+                include ../articles/article2.pug
 
-    footer.footer
-        section.footer__links
-            ul.footer__site-links
-                li.footer__site-links-item
-                    a.footer__site-links-link
-                        span.site-links-text Мои работы
-                li.footer__site-links-item
-                    a.footer__site-links-link
-                        span.footer__site-links-text Обо мне
-                li.footer__site-links-item
-                    a.footer__site-links-link
-                        span.footer__site-links-text Блог
-                li.footer__site-links-item
-                    a.footer__site-links-link
-                        span.footer__site-links-text Авторизация
-            ul.footer__social-links
-                li.footer__social-links-item
-                    a.footer__social-links-link
-                        span.fa.fa_vk.fa_large.fa_lighter
-                li.footer__social-links-item
-                    a.footer__social-links-link
-                        span.fa.fa_github_alt.fa_large.fa_lighter
-                li.footer__social-links-item
-                    a.footer__social-links-link
-                        span.fa.fa_linkedin.fa_large.fa_lighter
-        section.footer__copyright
-            p.footer__about-me.
-                Я веб-разработчик из Новосибирска, и этот сайт я сделал в рамках обучения в Школе онлайн образования
-                LoftSchool.
-            p.footer__about-author.
-                © Владимир Астахов | создано с любовью в LoftSchool | 2016
+    include ../components/footer.pug
 
