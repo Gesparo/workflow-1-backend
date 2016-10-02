@@ -1,0 +1,37 @@
+extends ../_layout
+
+block variables
+    - var title = 'Welcome'
+    - var mainCss = 'app'
+    - var simpled = true;
+
+block content
+    .page
+        include ../components/header.pug
+        include ../components/main-intro.pug
+
+
+    section.main-content
+        header.main-content__header
+            .large-title
+                span.large-title__text Мои работы
+        .main-content__left-side
+            .site-introduction
+                .site-introduction__header
+                    .normal-title
+                        span.normal-title__text Сайт школы онлайн образования
+                .site-introduction__used-technologies
+                    span.site-introduction__used-technologies-text HTML, CSS, JavaScript
+                a.site-introduction__link Посмотреть сайт
+        .main-content__right-side
+            .sites-slider
+                .sites-slider__present-site
+                    img.sites-slider__present-img(src="assets/img/work-1.png")
+                .sites-slider__nav
+                    .sites-slider__nav-prev
+                        img.sites-slider__nav-prev-img(src="assets/img/work-2.png")
+                    .sites-slider__nav-next
+                        img.sites-slider__nav-next-img(src="assets/img/work-3.png")
+
+    include ../components/footer.pug
+
