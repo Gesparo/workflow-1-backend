@@ -2,7 +2,7 @@
   $parent: &;
 
   width: 380px;
-  height: 400px;
+  height: 440px;
   text-align: center;
   background: #fff;
   opacity: .9;
@@ -12,6 +12,7 @@
   display: inline-block;
   top: 50%;
   left: 50%;
+  padding-top: 40px;
 
   margin-top: -200px;
   margin-left: -190px;
@@ -51,6 +52,10 @@
 
     .fa {
       margin: 0 15px;
+
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 
@@ -62,6 +67,7 @@
   &__social-link {
     display: block;
     cursor: pointer;
+    color: #00bfa5;
   }
 
   &__links {
@@ -90,6 +96,11 @@
     display: block;
     padding: 10px;
     cursor: pointer;
+    color: #fff;
+
+    &:hover {
+
+    }
   }
 
   &__link-text {
