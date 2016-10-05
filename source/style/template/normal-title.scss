@@ -1,7 +1,6 @@
 .normal-title {
   font-family: Bernier;
   font-size: 35px;
-  max-width: 305px;
   margin: 0 auto;
   text-align: center;
 
@@ -9,6 +8,7 @@
     display: inline-block;
     vertical-align: middle;
     margin: 0 20px;
+    max-width: 305px;
   }
 
   &:before, &:after {
