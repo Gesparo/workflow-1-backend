@@ -28,15 +28,15 @@ a {
 }
 
 @import "template/layout-intro-skeleton";
-@import "template/header-intro.scss";
+@import "components/header-intro";
 @import "components/auth-block";
 @import "components/person";
 @import "components/main-intro";
 @import "components/page-intro";
 @import "components/footer-intro";
 @import "components/social-links.scss";
-@import "template/introduction-block.scss";
-@import "template/fontawesome.scss";
+@import "components/introduction-block";
+@import "components/fontawesome";
 
 @import "template/layout-main.scss";
 @import "template/large-title.scss";
