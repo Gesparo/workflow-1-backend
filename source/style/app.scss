@@ -39,6 +39,11 @@ a {
   box-sizing: border-box;
 }
 
+// @TODO Need to put this style into any component folder
+.fluid-container {
+  max-width: 1680px;
+}
+
 @import "components/header-intro";
 @import "components/auth-block";
 @import "components/person";
