@@ -1,0 +1,8 @@
+.articles {
+  margin-left: 34%;
+  margin-bottom: 50px;
+
+  @include tablets() {
+    margin-left: 0;
+  }
+}

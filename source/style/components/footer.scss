@@ -1,0 +1,118 @@
+.footer {
+  background-color: #555b5e;
+  color: #fff;
+  clear: both;
+
+  &__links {
+    padding: 0 30px;
+    border-bottom: 1px solid #666c6e;
+    height: 75px;
+    line-height: 75px;
+    text-align: center;
+
+    @extend %clearfix;
+
+    @include tablets() {
+      height: initial;
+      line-height: initial;
+    }
+
+    @include phones() {
+      padding: 5px;
+    }
+  }
+
+  &__site-links {
+    float: left;
+    display: inline-block;
+    font-weight: 500;
+
+    @include tablets() {
+      float: none;
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__site-links-item {
+    display: inline-block;
+    margin-right: 40px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @include phones() {
+      margin-right: 0;
+    }
+  }
+
+  &__site-links-link, &__social-links-link {
+    display: block;
+    cursor: pointer;
+    color: #fff;
+  }
+
+  &__site-links-link {
+    @include tablets() {
+      padding: 15px;
+    }
+
+    @include phones() {
+      padding: 0;
+    }
+  }
+
+  &__social-block {
+    display: inline-block;
+    float: right;
+    font-size: 20px;
+
+    @include tablets() {
+      float: none;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__social-links-item {
+    display: inline-block;
+  }
+
+  &__copyright {
+    font-weight: 300;
+    padding: 15px 65px 15px 25px;
+    text-align: right;
+
+    @include clearfix;
+
+    @include tablets() {
+      padding-right: 15px;
+    }
+  }
+
+  &__about-me {
+    width: 45%;
+    float: left;
+    text-align: left;
+
+    @include tablets() {
+      float: none;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__about-author {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+    max-width: 50%;
+
+    @include tablets() {
+      display: block;
+      text-align: center;
+      max-width: 100%;
+    }
+  }
+}

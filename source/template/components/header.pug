@@ -1,14 +1,17 @@
 header.header
     ul.header__social-block
-        li.header__social-item
-            a.header__social-link
-                span.fa.fa_vk.fa_large.fa_lighter
-        li.header__social-item
-            a.header__social-link
-                span.fa.fa_github_alt.fa_large.fa_lighter
-        li.header__social-item
-            a.header__social-link
-                span.fa.fa_linkedin.fa_large.fa_lighter
+        ul.social-links.social-links_theme-white
+            li.social-links__item
+                a.social-links__link(href="https://vk.com/id67917958" target="_blank")
+                    span.fa.fa_vk
+            li.social-links__item
+                a.social-links__link(href="https://github.com/Gesparo" target="_blank")
+                    span.fa.fa_github_alt
+            li.social-links__item
+                a.social-links__link(href="#" target="_blank")
+                    span.fa.fa_linkedin
     .header__menu
-        a.header__social-link
-            span.fa.fa_bar.fa_large.fa_lighter
+        ul.social-links.social-links_theme-white
+            li.social-links__item
+                a.social-links__link(href="#")
+                    span.fa.fa_bar

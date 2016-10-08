@@ -44,6 +44,34 @@ a {
   max-width: 1680px;
 }
 
+.page-top {
+  background: url("../img/mountains1200.png") 0 0 no-repeat;
+  background-size: cover;
+  height: 400px;
+  position: relative;
+}
+
+.main-content {
+  padding-top: 55px;
+
+  &__container {
+    @extend %clearfix;
+  }
+}
+
+.container {
+  width: 1150px;
+  margin: 0 auto;
+
+  @include desktop() {
+    width: 942px;
+  }
+
+  @include laptop() {
+    width: 95%;
+  }
+}
+
 @import "components/header-intro";
 @import "components/auth-block";
 @import "components/person";
@@ -53,6 +81,14 @@ a {
 @import "components/social-links.scss";
 @import "components/introduction-block";
 @import "components/fontawesome";
+
+//blog
+@import "components/header";
+@import "components/main";
+@import "components/articles-nav";
+@import "components/articles";
+@import "components/article";
+@import "components/footer";
 
 @import "template/layout-main.scss";
 @import "template/large-title.scss";

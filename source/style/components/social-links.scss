@@ -22,4 +22,10 @@
       color: #00bfa5;
     }
   }
+
+  &_theme-white {
+    #{$parent}__link {
+      color: #fff;
+    }
+  }
 }

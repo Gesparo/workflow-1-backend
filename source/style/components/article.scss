@@ -1,0 +1,35 @@
+.article {
+  border-bottom: 5px solid #f1f1f2;
+  margin-bottom: 55px;
+  padding-bottom: 70px;
+
+  &:last-child {
+    border-bottom: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  &__header {
+    font-family: Bernier;
+    font-size: 32px;
+    text-align: left;
+    margin-bottom: 18px;
+    font-weight: normal;
+    color: #455a64;
+    margin-top: 0;
+  }
+
+  &__date {
+    color: #00bfa5;
+    margin-bottom: 20px;
+  }
+
+  &__paragraph {
+    margin-bottom: 15px;
+    line-height: 1.62;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
