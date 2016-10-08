@@ -1,0 +1,25 @@
+.social-links {
+  $parent : &;
+
+  &__item {
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+  &__link {
+    display: block;
+    cursor: pointer;
+    color: #000;
+    opacity: .7;
+
+    &:hover, &:active, &:focus {
+      opacity: 1;
+    }
+  }
+
+  &_theme-aquamarine {
+    #{$parent}__link {
+      color: #00bfa5;
+    }
+  }
+}

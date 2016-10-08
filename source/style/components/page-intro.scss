@@ -1,0 +1,17 @@
+.page-intro {
+  min-height: 100%;
+  margin-bottom: -75px;
+  background: url("../img/mountains1200.png") 0 0 no-repeat;
+  background-size: cover;
+  position: relative;
+
+  &:after {
+    content: '';
+    display: block;
+    height: 75px;
+  }
+  
+  @include tablets() {
+    background-image: url("../img/mountains768.png");
+  }
+}

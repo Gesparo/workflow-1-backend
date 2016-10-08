@@ -1,0 +1,12 @@
+.footer-intro {
+  height: 75px;
+  background: transparent;
+  padding: 25px 0;
+  position: relative;
+
+  &__content {
+    text-align: center;
+    font-weight: 300;
+    color: #fff;
+  }
+}

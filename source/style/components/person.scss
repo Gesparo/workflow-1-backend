@@ -1,0 +1,27 @@
+.person {
+  display: block;
+  width: 100%;
+  text-align: center;
+
+  &__img-block {
+    width: 140px;
+    height: 140px;
+    border-radius: 50% 50%;
+    overflow: hidden;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 28px;
+  }
+
+  &__desc {
+    font-weight: normal;
+  }
+}

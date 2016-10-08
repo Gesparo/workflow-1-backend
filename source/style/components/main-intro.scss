@@ -1,0 +1,22 @@
+.main-intro {
+  &__intro-block {
+    width: 380px;
+    height: 440px;
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -190px;
+
+    @include tablets() {
+      width: 350px;
+      margin-left: -175px;
+    }
+
+    @include phones() {
+      width: 300px;
+      margin-left: -150px;
+    }
+  }
+}

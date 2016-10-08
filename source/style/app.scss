@@ -1,5 +1,5 @@
 @import "common/fonts";
-@import "_mixins";
+@import "helpers/_mixins";
 
 body {
   margin: 0;
@@ -29,7 +29,12 @@ a {
 
 @import "template/layout-intro-skeleton";
 @import "template/header-intro.scss";
-@import "template/auth-block.scss";
+@import "components/auth-block";
+@import "components/person";
+@import "components/main-intro";
+@import "components/page-intro";
+@import "components/footer-intro";
+@import "components/social-links.scss";
 @import "template/introduction-block.scss";
 @import "template/fontawesome.scss";
 

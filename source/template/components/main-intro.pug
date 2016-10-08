@@ -1,27 +1,30 @@
 main.main-intro
-    .introduction-block(class=(simpled ? "introduction-block_simpled" : ""))
-        .introduction-block__main
-            .introduction-block__img-block
-                img.introduction-block__img(src="assets/img/avatar.png")
-            .introduction-block__name Мельник Максим
-            .introduction-block__desc Личный сайт веб разработчика
-            ul.introduction-block__social-block
-                li.introduction-block__social-item
-                    a.introduction-block__social-link(href="https://vk.com/id67917958" target="_blank")
-                        span.fa.fa_vk.fa_large.fa_lighter
-                li.introduction-block__social-item
-                    a.introduction-block__social-link(href="https://github.com/Gesparo" target="_blank")
-                        span.fa.fa_github_alt.fa_large.fa_lighter
-                li.introduction-block__social-item
-                    a.introduction-block__social-link
-                        span.fa.fa_linkedin.fa_large.fa_lighter
-        ul.introduction-block__links
-            li.introduction-block__links-item
-                a.introduction-block__link(href="works.html")
-                    span.introduction-block__link-text Мои работы
-            li.introduction-block__links-item
-                a.introduction-block__link(href="about.html")
-                    span.introduction-block__link-text Обо мне
-            li.introduction-block__links-item
-                a.introduction-block__link(href="blog.html")
-                    span.introduction-block__link-text Блог
+  .main-intro__intro-block
+    .introduction-block
+      .introduction-block__main
+        .introduction-block__personal-info
+
+          include ../components/person
+
+        .introduction-block__social-info
+          ul.social-links.social-links_theme-aquamarine
+            li.social-links__item
+              a.social-links__link(href="https://vk.com/id67917958" target="_blank")
+                span.fa.fa_vk
+            li.social-links__item
+              a.social-links__link(href="https://github.com/Gesparo" target="_blank")
+                span.fa.fa_github_alt
+            li.social-links__item
+              a.social-links__link(href="#" target="_blank")
+                span.fa.fa_linkedin
+
+      ul.introduction-block__links
+        li.introduction-block__links-item
+          a.introduction-block__link(href="works.html")
+            span.introduction-block__link-text Мои работы
+        li.introduction-block__links-item
+          a.introduction-block__link(href="about.html")
+            span.introduction-block__link-text Обо мне
+        li.introduction-block__links-item
+          a.introduction-block__link(href="blog.html")
+            span.introduction-block__link-text Блог

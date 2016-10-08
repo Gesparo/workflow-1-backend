@@ -204,10 +204,19 @@ body {
 }
 
 .main-content {
+  display: table;
+  width: 100%;
+
+  &__header {
+    display: table-caption;
+    margin-bottom: 70px;
+  }
+
   &__left-side, &__right-side {
-    float: left;
+    text-align: center;
+    vertical-align: middle;
     width: 50%;
-    padding: 0 0 45px;
+    display: table-cell;
   }
 
   &__left-side {
@@ -218,7 +227,7 @@ body {
     background-color: #eeebdf;
   }
 
-  @include clearfix;
+  //@include clearfix;
 }
 
 .about-me {
@@ -339,6 +348,7 @@ body {
 }
 
 .site-introduction {
+  display: inline-block;
   width: 420px;
   text-align: center;
 
@@ -394,10 +404,47 @@ body {
   }
 
   &__nav-prev, &__nav-next {
+    $navs: &;
+
     height: 225px;
     width: 50%;
     padding: 25px 10px 10px;
     float: left;
+    position: relative;
+
+    &:hover {
+      #{$navs}:after{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        font: normal normal normal 16px/1 FontAwesome;
+        font-size: 1rem;
+        background-color: #ddd;
+        opacity: .5;
+      }
+    }
+  }
+
+  &__nav-prev {
+    $navPrev : &;
+
+    &:hover{
+      #{$navPrev}:after{
+        content: '\f107';
+      }
+    }
+  }
+
+  &__nav-next {
+    $navNext : &;
+
+    &:hover{
+      #{$navNext}:after{
+        content: '\ f106';
+      }
+    }
   }
 
   &__nav-prev-img, &__nav-next-img {

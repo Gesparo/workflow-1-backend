@@ -4,31 +4,12 @@ body {
   font-family: Roboto, sans-serif;
   font-size:16px;
   line-height: 1.42;
-}
 
-.footer-intro {
-  height: 75px;
-  background: transparent;
-  padding: 30px 0;
-  position: relative;
-
-  &__content {
-    text-align: center;
-    font-weight: 300;
-    color: #fff;
+  @include phones() {
+    font-size: 14px;
   }
 }
 
-.page-intro {
-  min-height: 100%;
-  margin-bottom: -75px;
-  background: url("../img/mountains1200.png") 0 0 no-repeat;
-  background-size: cover;
-  position: relative;
 
-  &:after {
-    content: '';
-    display: block;
-    height: 75px;
-  }
-}
+
+
