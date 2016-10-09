@@ -7,7 +7,9 @@ block variables
 block content
     .page
         include ../components/header.pug
-        include ../components/main-intro.pug
+        .page__main
+            .page__information-block
+                include ../components/person.pug
 
     .main-content
         .main-content__left-side
