@@ -146,6 +146,7 @@
   display: inline-block;
   width: 420px;
   text-align: center;
+  display: none;
 
   &__header {
     margin-bottom: 35px;
@@ -168,6 +169,10 @@
     padding: 15px 20px;
     color: #fff;
     background-color: #00bfa5;
+  }
+
+  &_active {
+    display: inline-block;
   }
 }
 

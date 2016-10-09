@@ -15,7 +15,7 @@
   }
 
   &__present-img {
-    display: block;
+    display: none;
     max-width: 100%;
     max-height: 100%;
     margin: 0 auto;
@@ -67,9 +67,13 @@
   }
 
   &__nav-prev-img, &__nav-next-img {
-    display: block;
+    display: none;
     max-width: 100%;
     max-height: 100%;
     margin: 0 auto;
   }
+
+  &_active-slide, &_active-present {
+    display: block;
+  }  
 }
