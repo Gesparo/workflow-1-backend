@@ -93,7 +93,8 @@ a {
 // works 
 @import "components/page";
 @import "components/site-slider";
+@import "components/feedback";
 
 @import "template/layout-main.scss";
-@import "template/large-title.scss";
+@import "components/large-title";
 @import "template/normal-title.scss";

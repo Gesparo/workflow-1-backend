@@ -1,7 +1,7 @@
 extends ../_layout
 
 block variables
-    - var title = 'Welcome'
+    - var title = 'Works'
     - var simpled = true;
 
 block content
@@ -53,6 +53,53 @@ block content
                         img.site-slider__nav-next-img(src="assets/img/work-1.png")                        
                         img.site-slider__nav-next-img.site-slider_active-slide(src="assets/img/work-3.png")
                         img.site-slider__nav-next-img(src="assets/img/work-2.png")
+    section.feedback
+        header.feedback__header
+            .large-title
+                span.large-title__text Что обо мне говорят
+        .container
+            .feedback__comments
+                ul.feedback__comments-list
+                    li.feedback__comments-item
+                        .feedback__comment.
+                            Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только
+                            самых тяжелых испытаний и бессонных ночей!
+                        .feedback__comments-person
+                            .feedback__comments-img-block
+                                img.feedback__comments-img(src="assets/img/commentato1.png")
+                            .feedback__commentator
+                                .feedback__comments-commentator Ковальчук Дмитрий
+                                .feedback__comments-commentator-job основатель Loftschool
+                    li.feedback__comments-item
+                        .feedback__comment.
+                            Этот код выдержет любые испытания. Только пожалуйста, не загружается сайт на слишком
+                            старых браузерах!
+                        .feedback__comments-person
+                            .feedback__comments-img-block
+                                img.feedback__comments-img(src="assets/img/commentato2.png")
+                            .feedback__commentator
+                                .feedback__comments-commentator-name Зар Захаров
+                                .feedback__comments-commentator-job преподаватель
+
+
+        form.feedback__form
+            .feedback__form-main
+                .feedback__form-header
+                    .normal-title
+                        span.normal-title__text Связаться со мной
+                .feedback__form-group
+                    input.feedback__form-input(type="text" name="name" placeholder="Имя")
+                .feedback__form-group
+                    input.feedback__form-input(type="email" name="email" placeholder="Email")
+                .feedback__form-group
+                    textarea.feedback__form-textarea(name="comment" rows="4" placeholder="Введите сообщение")
+            ul.feedback__form-buttons
+                li.feedback__button-item
+                    button.feedback__button(type="submit") Отправить
+                li.feedback__button-item
+                    button.feedback__button(type="reset") Очистить
+        .feedback__page-up
+            span.fa.fa_angel-up
 
     include ../components/footer.pug
 
