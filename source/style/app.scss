@@ -51,14 +51,6 @@ a {
   position: relative;
 }
 
-.main-content {
-  padding-top: 55px;
-
-  &__container {
-    @extend %clearfix;
-  }
-}
-
 .container {
   width: 1150px;
   margin: 0 auto;
@@ -94,6 +86,7 @@ a {
 @import "components/page";
 @import "components/site-slider";
 @import "components/feedback";
+@import "components/main-content";
 
 @import "template/layout-main.scss";
 @import "components/large-title";

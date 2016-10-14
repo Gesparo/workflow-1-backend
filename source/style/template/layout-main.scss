@@ -1,29 +1,4 @@
-.main-content {
-  display: table;
-  width: 100%;
 
-  &__header {
-    display: table-caption;
-    margin-bottom: 70px;
-  }
-
-  &__left-side, &__right-side {
-    text-align: center;
-    vertical-align: middle;
-    width: 50%;
-    display: table-cell;
-  }
-
-  &__left-side {
-    background-color: #efeee9;
-  }
-
-  &__right-side {
-    background-color: #eeebdf;
-  }
-
-  //@include clearfix;
-}
 
 .about-me {
   margin: 0 auto;
