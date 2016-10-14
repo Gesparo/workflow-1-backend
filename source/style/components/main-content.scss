@@ -1,0 +1,30 @@
+.main-content {
+  display: table;
+  width: 100%;
+
+  &__container {
+    @extend %clearfix;
+  }
+
+  &__header {
+    display: table-caption;
+    padding-bottom: 70px;
+    padding-top: 55px;
+    background-color: #faf8f0;
+  }
+
+  &__left-side, &__right-side {
+    text-align: center;
+    vertical-align: middle;
+    width: 50%;
+    display: table-cell;
+  }
+
+  &__left-side {
+    background-color: #efeee9;
+  }
+
+  &__right-side {
+    background-color: #eeebdf;
+  }
+}
