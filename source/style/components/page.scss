@@ -2,6 +2,28 @@
   background: url("../img/mountains1200.png") 0 0 no-repeat;
   background-size: cover;
   height: 100%;
+  position: relative;
+
+  &:before, &:after {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 0;
+    height: 0;
+    content: "";
+    border-style: solid;
+  }
+
+  &:before {
+    border-width: 9vw 2vw 0 50vw;
+    border-color: transparent transparent transparent #faf8f0;
+  }
+
+  &:after {
+    right: 0;
+    border-width: 0 0 9vw 53vw;
+    border-color: transparent transparent #faf8f0 transparent;
+  }
 
   &__information-block {
     width: 380px;
