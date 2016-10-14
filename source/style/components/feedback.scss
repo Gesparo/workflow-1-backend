@@ -63,18 +63,37 @@
     font-weight: 500;
   }
 
-  &__form {
+  &__form-wrapper {
     width: 380px;
+    height: 470px;
     margin: 0 auto;
     border-radius: 7px;
     overflow: hidden;
     margin-bottom: 40px;
+    position: relative;
+  }
+
+  &__form {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  &__form-background {
+    background-image: url(/assets/img/bg.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    filter: blur(20px);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   &__form-main {
+    position: relative;
     padding: 30px 20px 20px;
-    background: transparent url('../img/form-bg.png') 0 0 no-repeat;
-    background-size: cover;
   }
 
   &__form-header {

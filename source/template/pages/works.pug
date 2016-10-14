@@ -84,22 +84,24 @@ block content
                                 .feedback__comments-commentator-job преподаватель
 
 
-        form.feedback__form
-            .feedback__form-main
-                .feedback__form-header
-                    .normal-title
-                        span.normal-title__text Связаться со мной
-                .feedback__form-group
-                    input.feedback__form-input(type="text" name="name" placeholder="Имя")
-                .feedback__form-group
-                    input.feedback__form-input(type="email" name="email" placeholder="Email")
-                .feedback__form-group
-                    textarea.feedback__form-textarea(name="comment" rows="4" placeholder="Введите сообщение")
-            ul.feedback__form-buttons
-                li.feedback__button-item
-                    button.feedback__button(type="submit") Отправить
-                li.feedback__button-item
-                    button.feedback__button(type="reset") Очистить
+        .feedback__form-wrapper
+            .feedback__form-background
+            form.feedback__form
+                .feedback__form-main
+                    .feedback__form-header
+                        .normal-title
+                            span.normal-title__text Связаться со мной
+                    .feedback__form-group
+                        input.feedback__form-input(type="text" name="name" placeholder="Имя")
+                    .feedback__form-group
+                        input.feedback__form-input(type="email" name="email" placeholder="Email")
+                    .feedback__form-group
+                        textarea.feedback__form-textarea(name="comment" rows="4" placeholder="Введите сообщение")
+                ul.feedback__form-buttons
+                    li.feedback__button-item
+                        button.feedback__button(type="submit") Отправить
+                    li.feedback__button-item
+                        button.feedback__button(type="reset") Очистить
         .feedback__page-up
             span.fa.fa_angel-up
 
