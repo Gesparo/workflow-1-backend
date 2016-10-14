@@ -26,7 +26,15 @@ $(window).on('resize', function () {
 ;(function() {
   'use strict';
 
+  // Blur form
   blur.init();
+
+  // scroll to page top
+  $('.feedback__page-up').on('click', function () {
+    $('html, body').animate({scrollTop: 0}, 300);
+  });
+
+
 
   $(".site-slider").on('click', '.site-slider__nav-prev', function () {
     var $this = $(this),
