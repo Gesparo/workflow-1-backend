@@ -48,13 +48,23 @@ block content
                     img.site-slider__present-img(src="assets/img/work-2.png")                    
                 .site-slider__nav
                     .site-slider__nav-prev
-                        img.site-slider__nav-prev-img(src="assets/img/work-1.png")
-                        img.site-slider__nav-prev-img.site-slider_active-slide(src="assets/img/work-2.png")
-                        img.site-slider__nav-prev-img(src="assets/img/work-3.png")
+                        .site-slider__nav-wrap
+                            ul.site-slider__nav-list
+                                li.site-slider__nav-item
+                                    img.site-slider__nav-prev-img(src="assets/img/work-1.png")
+                                li.site-slider__nav-item
+                                    img.site-slider__nav-prev-img(src="assets/img/work-2.png")
+                                li.site-slider__nav-item.site-slider__active-slide
+                                    img.site-slider__nav-prev-img(src="assets/img/work-3.png")
                     .site-slider__nav-next
-                        img.site-slider__nav-next-img(src="assets/img/work-1.png")                        
-                        img.site-slider__nav-next-img.site-slider_active-slide(src="assets/img/work-3.png")
-                        img.site-slider__nav-next-img(src="assets/img/work-2.png")
+                        .site-slider__nav-wrap
+                            ul.site-slider__nav-list
+                                li.site-slider__nav-item.site-slider__active-slide
+                                    img.site-slider__nav-next-img(src="assets/img/work-1.png")
+                                li.site-slider__nav-item
+                                    img.site-slider__nav-next-img(src="assets/img/work-3.png")
+                                li.site-slider__nav-item
+                                    img.site-slider__nav-next-img(src="assets/img/work-2.png")
     section.feedback
         header.feedback__header
             .large-title
