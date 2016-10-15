@@ -4,11 +4,19 @@
   margin: 0 auto;
   text-align: center;
 
+  @include phones() {
+    font-size: 21px;
+  }
+
   &__text {
     display: inline-block;
     vertical-align: middle;
     margin: 0 20px;
     max-width: 305px;
+
+    @include phones() {
+      max-width: 250px;
+    }
   }
 
   &:before, &:after {

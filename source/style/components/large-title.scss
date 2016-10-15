@@ -5,11 +5,20 @@
   text-align: center;
   line-height: 1;
 
+  @include phones() {
+    font-size: 38px;
+  }
+
   &__text {
     display: inline-block;
     vertical-align: middle;
     margin: 0 20px;
     max-width: 305px;
+
+    @include phones() {
+      max-width: 250px;
+      margin: 0 10px;
+    }
   }
 
   &:before, &:after {

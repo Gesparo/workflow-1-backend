@@ -5,6 +5,18 @@
   font-size: 1rem;
   text-align: center;
 
+  @include desktop() {
+    background-image: url("../img/bg1200.png");
+  }
+
+  @include tablets() {
+    background-image: url("../img/bg768.png");
+  }
+
+  @include phones() {
+    background-image: url("../img/bg480.png");
+  }
+
   &__header {
     margin-bottom: 65px;
   }
@@ -14,21 +26,30 @@
   }
 
   &__comments-list {
-    width: 850px;
+    max-width: 850px;
     margin: 0 auto;
     font-size: 0;
     text-align: justify;
   }
 
   &__comments-item {
-    max-width: 45%;
+    max-width: 47%;
     text-align: left;
     vertical-align: top;
     font-size: 1rem;
     display: inline-block;
 
+    @include phones() {
+      max-width: 100%;
+      margin-bottom: 25px;
+    }
+
     &:last-child {
       margin-left: 5%;
+
+      @include phones() {
+        margin-left: 0;
+      }
     }
   }
 
@@ -71,6 +92,10 @@
     overflow: hidden;
     margin-bottom: 40px;
     position: relative;
+
+    @include phones() {
+      width: 300px;
+    }
   }
 
   &__form {
@@ -89,6 +114,26 @@
     position: absolute;
     top: 0;
     left: 0;
+
+    @include desktop() {
+      background-image: url("../img/bg1200.png");
+    }
+
+    @include tablets() {
+      background-image: url("../img/bg768.png");
+    }
+
+    @include phones() {
+      background-image: url("../img/bg480.png");
+    }
+  }
+
+  &__header {
+    margin-bottom: 65px;
+  }
+
+  &__comments {
+    margin-bottom: 70px;
   }
 
   &__form-main {
