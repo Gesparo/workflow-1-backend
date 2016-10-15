@@ -161,17 +161,18 @@ var slider = (function () {
 })();
 
 $(window).on('resize', function () {
-  blur.init();
+  if( $('.feedback').length ) blur.init();
 });
 
 ;(function() {
   'use strict';
+  if( $('.feedback').length ) {
+    // Blur form
+    blur.init();
 
-  // Blur form
-  blur.init();
-
-  // Slider init
-  slider.init();
+    // Slider init
+    slider.init();
+  }
 
   // scroll to page top
   $('.feedback__page-up').on('click', function () {
