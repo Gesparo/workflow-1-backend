@@ -44,6 +44,10 @@
 
   &__link {
     display: block;
-    cursor: pointer;
+    color: #fff;
+
+    &:hover, &:active, &:focus {
+      color: #fff;
+    }
   }
 }
