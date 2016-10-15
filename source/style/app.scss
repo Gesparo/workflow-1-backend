@@ -91,6 +91,10 @@ a {
 @import "components/main-content";
 @import "components/site-introduction";
 
-@import "template/layout-main.scss";
+//about-me
+@import "components/about-me";
+@import "components/skills-block";
+@import "components/contacts";
+
 @import "components/large-title";
 @import "components/normal-title";
