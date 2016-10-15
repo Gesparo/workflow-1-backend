@@ -7,6 +7,7 @@ body {
   font-family: Roboto, sans-serif;
   font-size:16px;
   line-height: 1.42;
+  position: relative;
 
   @include phones() {
     font-size: 14px;
@@ -73,6 +74,7 @@ a {
 @import "components/social-links.scss";
 @import "components/introduction-block";
 @import "components/fontawesome";
+@import "components/popup-menu";
 
 //blog
 @import "components/header";

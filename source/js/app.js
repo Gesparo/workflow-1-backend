@@ -178,4 +178,12 @@ $(window).on('resize', function () {
     $('html, body').animate({scrollTop: 0}, 300);
   });
 
+  $('.header__menu').on('click', '.social-links__link', function () {
+    $('.popup-menu').show();
+  });
+
+  $('.popup-menu__close').on('click', function () {
+    $('.popup-menu').hide();
+  });
+
 })();
