@@ -2,6 +2,10 @@
   display: table;
   width: 100%;
 
+  @include tablets() {
+    display: block;
+  }
+
   &__container {
     @extend %clearfix;
   }
@@ -11,6 +15,10 @@
     padding-bottom: 70px;
     padding-top: 55px;
     background-color: #faf8f0;
+
+    @include tablets() {
+      display: block;
+    }
   }
 
   &__left-side, &__right-side {
@@ -18,6 +26,12 @@
     vertical-align: middle;
     width: 50%;
     display: table-cell;
+
+    @include tablets() {
+      display: block;
+      width: 100%;
+      padding: 45px 10px;
+    }
   }
 
   &__left-side {

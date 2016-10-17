@@ -13,6 +13,10 @@
 
   &__group {
     margin-bottom: 35px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &__group-title {
@@ -20,11 +24,20 @@
     font-weight: 500;
     margin-bottom: 15px;
     text-align: left;
+
+    @include tablets() {
+      text-align: center;
+      font-size: 21px;
+    }
   }
 
   &__skills {
     font-size: 0;
     text-align: left;
+
+    @include tablets() {
+      text-align: center;
+    }
   }
 
   &__skill {
@@ -37,9 +50,19 @@
     background-image: url("../img/round-skill.png");
     background-size: cover;
     text-align: center;
+    margin-bottom: 25px;
+
+    @include tablets() {
+      margin-left: 15px;
+      margin-right: 15px;
+    }
 
     &:last-child {
       margin-right: 0;
+
+      @include tablets() {
+        margin-right: 15px;
+      }
     }
 
     &:after {
