@@ -65,6 +65,20 @@ a {
   }
 }
 
+.slide-block {
+
+  &__header {
+    display: block;
+    padding-bottom: 70px;
+    padding-top: 55px;
+    background-color: #faf8f0;
+
+    @include tablets() {
+      display: block;
+    }
+  }
+}
+
 @import "components/header-intro";
 @import "components/auth-block";
 @import "components/person";

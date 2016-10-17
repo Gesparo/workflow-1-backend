@@ -1,10 +1,47 @@
 .site-slider {
   width: 100%;
   text-align: center;
+  height: 750px;
+
+  @include laptop() {
+    height: inherit;
+  }
+
+  @extend %clearfix;
+
+  &__site-introduction {
+    float: left;
+    height: 100%;
+    width: 50%;
+    background-color: #f0efe9;
+
+    @include laptop() {
+      float: none;
+      width: 100%;
+      height: 270px;
+    }
+
+    @include phones() {
+      height: 220px;
+    }
+  }
 
   &__present-site {
     height: 525px;
     padding: 105px 10px;
+    float: right;
+    width: 50%;
+    background-color: #efebe0;
+
+    @include laptop() {
+      float: none;
+      width: 100%;
+    }
+
+    @include phones() {
+      height: 260px;
+      padding: 50px 45px;
+    }
 
     &:after {
       content: '';
@@ -31,12 +68,24 @@
 
   &__nav {
     @extend %clearfix;
+    height: 225px;
+    float: right;
+    width: 50%;
+
+    @include laptop() {
+      float: none;
+      width: 100%;
+    }
+
+    @include phones() {
+      height: 95px;
+    }
   }
 
   &__nav-prev, &__nav-next {
     position: relative;
     width: 50%;
-    height: 225px;
+    height: 100%;
     float: left;
   }
 
@@ -54,6 +103,10 @@
   &__nav-item {
     height: 225px;
     padding: 25px 10px 10px;
+
+    @include phones() {
+      height: 95px;
+    }
   }
 
   &__nav-prev-img, &__nav-next-img {
@@ -78,11 +131,19 @@
         color: #fff;
         background-color: rgba(146, 146, 146, 0.7);
         line-height: 225px;
+
+      @include phones() {
+        line-height: 95px;
+      }
     }
 
     &:hover {
       &:after {
         padding-top: 20px;
+
+        @include phones() {
+          padding-top: 10px;
+        }
       }
     }
   } 

@@ -21,7 +21,7 @@ var blur = (function () {
 
 var slider = (function () {
   var siteSlider = $('.site-slider'),
-      siteIntroductionBlock = siteSlider.closest('.main-content').find('.site-introduction'),
+      siteIntroductionBlock = siteSlider.find('.site-introduction'),
       presentSite = siteSlider.find('.site-slider__present-site'),
       nav = siteSlider.find('.site-slider__nav'),
       prevNav = nav.find('.site-slider__nav-prev'),

@@ -12,12 +12,22 @@ block content
                 include ../components/person.pug
 
 
-    section.main-content
-        header.main-content__header
+    section.slide-block
+        header.slide-block__header
             .large-title
                 span.large-title__text Мои работы
-        .main-content__left-side
-            .site-introduction
+
+        .site-slider
+            .site-slider__present-site
+                ul.site-slider__present-list
+                    li.site-slider__present-item
+                        img.site-slider__present-img(src="assets/img/work-1.png")
+                    li.site-slider__present-item.site-slider__active-slide
+                        img.site-slider__present-img(src="assets/img/work-2.png")
+                    li.site-slider__present-item
+                        img.site-slider__present-img(src="assets/img/work-3.png")
+
+            .site-introduction.site-slider__site-introduction
                 ul.site-introduction__list
                     li.site-introduction__item
                         .site-introduction__item-content
@@ -44,35 +54,25 @@ block content
                                 span.site-introduction__used-technologies-text HTML, CSS, JavaScript
                             a.site-introduction__link Посмотреть сайт
 
-        .main-content__right-side
-            .site-slider
-                .site-slider__present-site
-                    ul.site-slider__present-list
-                        li.site-slider__present-item
-                            img.site-slider__present-img(src="assets/img/work-1.png")
-                        li.site-slider__present-item.site-slider__active-slide
-                            img.site-slider__present-img(src="assets/img/work-2.png")
-                        li.site-slider__present-item
-                            img.site-slider__present-img(src="assets/img/work-3.png")
-                .site-slider__nav
-                    .site-slider__nav-prev
-                        .site-slider__nav-wrap
-                            ul.site-slider__nav-list
-                                li.site-slider__nav-item
-                                    img.site-slider__nav-prev-img(src="assets/img/work-1.png")
-                                li.site-slider__nav-item
-                                    img.site-slider__nav-prev-img(src="assets/img/work-2.png")
-                                li.site-slider__nav-item.site-slider__active-slide
-                                    img.site-slider__nav-prev-img(src="assets/img/work-3.png")
-                    .site-slider__nav-next
-                        .site-slider__nav-wrap
-                            ul.site-slider__nav-list
-                                li.site-slider__nav-item.site-slider__active-slide
-                                    img.site-slider__nav-next-img(src="assets/img/work-1.png")
-                                li.site-slider__nav-item
-                                    img.site-slider__nav-next-img(src="assets/img/work-3.png")
-                                li.site-slider__nav-item
-                                    img.site-slider__nav-next-img(src="assets/img/work-2.png")
+            .site-slider__nav
+                .site-slider__nav-prev
+                    .site-slider__nav-wrap
+                        ul.site-slider__nav-list
+                            li.site-slider__nav-item
+                                img.site-slider__nav-prev-img(src="assets/img/work-1.png")
+                            li.site-slider__nav-item
+                                img.site-slider__nav-prev-img(src="assets/img/work-2.png")
+                            li.site-slider__nav-item.site-slider__active-slide
+                                img.site-slider__nav-prev-img(src="assets/img/work-3.png")
+                .site-slider__nav-next
+                    .site-slider__nav-wrap
+                        ul.site-slider__nav-list
+                            li.site-slider__nav-item.site-slider__active-slide
+                                img.site-slider__nav-next-img(src="assets/img/work-1.png")
+                            li.site-slider__nav-item
+                                img.site-slider__nav-next-img(src="assets/img/work-3.png")
+                            li.site-slider__nav-item
+                                img.site-slider__nav-next-img(src="assets/img/work-2.png")
 
     include ../components/feedback
     include ../components/footer.pug
