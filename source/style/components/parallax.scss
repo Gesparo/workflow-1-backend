@@ -1,0 +1,46 @@
+.parallax {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  &__layer {
+    width: 109%;
+    margin-left: -50%;
+    left: 50%;
+    height: 106%;
+    bottom: -15%;
+    position: absolute;
+  }
+
+  &__img {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  &_cloud1 {
+    width: 60%;
+    bottom: -6%;
+    left: 48%;
+  }
+
+  &_cloud2 {
+    width: 20%;
+    bottom: 51%;
+    left: 85%;
+  }
+
+  &_cloud3 {
+    width: 19%;
+    bottom: 78%;
+    left: 122%;
+  }
+
+  &_sky {
+    height: 110%;
+  }
+}
