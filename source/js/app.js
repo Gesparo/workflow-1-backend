@@ -220,11 +220,19 @@ $(window).on('resize', function () {
   });
 
   $('.header__menu').on('click', '.social-links__link', function () {
+
+    $(this).hide();
     $('.popup-menu').show();
+
   });
 
   $('.popup-menu__close').on('click', function () {
+
     $('.popup-menu').hide();
+    // Не знаю почему именно так работает, но оно работает
+    // Видимо, когда мы прячем меню, jquery скрывает только дочерний элемент
+    $('.header__menu').find('.social-links__link').show();
+
   });
 
 })();
