@@ -202,6 +202,10 @@ $(window).on('resize', function () {
 ;(function() {
   'use strict';
 
+  $('.auth-block__button').on('click', function() {
+    $('.introduction-block__content').toggleClass('introduction-block_active-card');
+  });
+
   if( $('.parallax').length ) {
     parallax.init();
   }

@@ -1,30 +1,44 @@
 main.main-intro
   .main-intro__intro-block
     .introduction-block
-      .introduction-block__main
-        .introduction-block__personal-info
+      .introduction-block__content
+        .introduction-block__front
+          .introduction-block__main
 
-          include ../components/person
+              .introduction-block__personal-info
 
-        .introduction-block__social-info
-          ul.social-links.social-links_theme-aquamarine
-            li.social-links__item
-              a.social-links__link(href="https://vk.com/id67917958" target="_blank")
-                span.fa.fa_vk
-            li.social-links__item
-              a.social-links__link(href="https://github.com/Gesparo" target="_blank")
-                span.fa.fa_github_alt
-            li.social-links__item
-              a.social-links__link(href="#" target="_blank")
-                span.fa.fa_linkedin
+                include ../components/person
 
-      ul.introduction-block__links
-        li.introduction-block__links-item
-          a.introduction-block__link(href="works.html")
-            span.introduction-block__link-text Мои работы
-        li.introduction-block__links-item
-          a.introduction-block__link(href="about.html")
-            span.introduction-block__link-text Обо мне
-        li.introduction-block__links-item
-          a.introduction-block__link(href="blog.html")
-            span.introduction-block__link-text Блог
+              .introduction-block__social-info
+                ul.social-links.social-links_theme-aquamarine
+                  li.social-links__item
+                    a.social-links__link(href="https://vk.com/id67917958" target="_blank")
+                      span.fa.fa_vk
+                  li.social-links__item
+                    a.social-links__link(href="https://github.com/Gesparo" target="_blank")
+                      span.fa.fa_github_alt
+                  li.social-links__item
+                    a.social-links__link(href="#" target="_blank")
+                      span.fa.fa_linkedin
+
+          ul.introduction-block__links
+            li.introduction-block__links-item
+              a.introduction-block__link(href="works.html")
+                span.introduction-block__link-text Мои работы
+            li.introduction-block__links-item
+              a.introduction-block__link(href="about.html")
+                span.introduction-block__link-text Обо мне
+            li.introduction-block__links-item
+              a.introduction-block__link(href="blog.html")
+                span.introduction-block__link-text Блог
+        .introduction-block__back
+          .introduction-block__main
+            span Some text
+          ul.introduction-block__links
+            li.introduction-block__links-item
+              a.introduction-block__link(href="/")
+                span.introduction-block__link-text На главную
+            li.introduction-block__links-item
+              a.introduction-block__link(href="#")
+                span.introduction-block__link-text Войти
+            li.introduction-block__links-item
