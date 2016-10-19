@@ -8,15 +8,23 @@
     padding: 10px 15px;
     margin-bottom: 10px;
     line-height: 1.62;
+    cursor: pointer;
 
     &:last-child {
       margin-bottom: 0;
+    }
+
+    &:hover, &:focus, &:active {
+      color: #00bfa5;
+      border-right: 3px solid #00bfa5;
+      font-weight: bold;
     }
   }
 
   &__link {
     display: inline-block;
-    cursor: pointer;
+    color: inherit;
+    font-weight: inherit;
   }
 
   &_active {
