@@ -5,10 +5,12 @@ block variables
 
 block content
     .page-top
-        include ../components/header.pug
-        include ../components/main.pug
+        .page-top__header
+            include ../components/header.pug
+        .page-top__main
+            include ../components/main.pug
 
-    section.main-content
+    section.main-content.main-content_articles
         .container.main-content__container
             include ../components/articles-nav.pug
 

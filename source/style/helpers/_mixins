@@ -32,6 +32,29 @@
   }
 }
 
+@mixin gradientTriangle($colorLeft : #faf8f0, $colorRight : #faf8f0) {
+  &:before, &:after {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 0;
+    height: 0;
+    content: "";
+    border-style: solid;
+  }
+
+  &:before {
+    border-width: 9vw 2vw 0 50vw;
+    border-color: transparent transparent transparent $colorLeft;
+  }
+
+  &:after {
+    right: 0;
+    border-width: 0 0 9vw 50vw;
+    border-color: transparent transparent $colorRight transparent;
+  }
+}
+
 //responsive
 @function rem($px) {
   @return $px / 16px + 0rem;

@@ -45,13 +45,6 @@ a {
   max-width: 1680px;
 }
 
-.page-top {
-  background: url("../img/mountains1200.png") 0 0 no-repeat;
-  background-size: cover;
-  height: 400px;
-  position: relative;
-}
-
 .container {
   width: 1150px;
   margin: 0 auto;
@@ -94,6 +87,7 @@ a {
 @import "components/parallax";
 
 //blog
+@import "components/page-top";
 @import "components/header";
 @import "components/main";
 @import "components/articles-nav";
