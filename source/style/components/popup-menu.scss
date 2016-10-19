@@ -47,7 +47,13 @@
     color: #fff;
 
     &:hover, &:active, &:focus {
-      color: #fff;
+
+      .large-title {
+        &:before, &:after {
+          opacity: 0;
+        }
+      }
+
     }
   }
 }
