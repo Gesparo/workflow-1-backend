@@ -206,6 +206,28 @@ $(window).on('resize', function () {
     $('.introduction-block__content').toggleClass('introduction-block_active-card');
   });
 
+  $(window).on('scroll', function () {
+    var $this = $(this),
+        nav = $('.articles-nav'),
+        prevBlock = nav.closest('.main-content').prev();
+
+    if( prevBlock.length && $this.scrollTop() > prevBlock.height()) {
+
+      if ( !nav.hasClass('articles-nav_fixed')  ) {
+        nav.css({
+          'top' : '0px',
+          'left' : nav.offset().left + 'px',
+          'width' : nav.width() + 'px'
+        });
+
+        nav.addClass('articles-nav_fixed');
+      }
+
+    } else {
+      nav.removeClass('articles-nav_fixed');
+    }
+  });
+
   if( $('.parallax').length ) {
     parallax.init();
   }
