@@ -54,6 +54,11 @@
   }
 
   &__site-links-link {
+
+    &:hover, &:focus, &:active {
+      text-decoration: underline;
+    }
+
     @include tablets() {
       padding: 15px;
     }
