@@ -28,4 +28,9 @@
   @include tablets() {
     display: none;
   }
+
+  &_fixed {
+    float: none;
+    position: fixed;
+  }
 }
