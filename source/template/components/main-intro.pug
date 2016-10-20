@@ -31,14 +31,33 @@ main.main-intro
             li.introduction-block__links-item
               a.introduction-block__link(href="blog.html")
                 span.introduction-block__link-text Блог
-        .introduction-block__back
+        form#authorization.introduction-block__back(method="POST")
           .introduction-block__main
-            span Some text
+            .introduction-block__header
+              .normal-title
+                span.normal-title__text Авторизуйтесь
+            .introduction-block__form-group
+              .introduction-block__input-containter
+                label.introduction-block__icon-label.introduction-block_user-icon
+                input.introduction-block__input(type="text" name="login" placeholder="Логин")
+            .introduction-block__form-group
+              .introduction-block__input-containter
+                label.introduction-block__icon-label.introduction-block_pass-icon
+                input.introduction-block__input(type="password" name="login" placeholder="Пароль")
+            .introduction-block__form-group
+              input.introduction-block__checkbox.introduction-block_hidden-input(type="checkbox" name="confirmPerson" id="confirmPerson")
+              label.introduction-block__styled-label(for="confirmPerson") Я человек
+            h3.introduction-block__form-section-header Вы точно не робот?
+            .introduction-block__form-group.introduction-block_center-aligned
+                input.introduction-block__radio.introduction-block_hidden-input(type="radio" id="radConfirmPerson1" name="secondConfirmPerson" value="y" checked)
+                label.introduction-block__styled-radio(for="radConfirmPerson1") Да
+                input.introduction-block__radio.introduction-block_hidden-input(type="radio" id="radConfirmPerson2" name="secondConfirmPerson" value="n")
+                label.introduction-block__styled-radio(for="radConfirmPerson2") Не уверен
           ul.introduction-block__links
             li.introduction-block__links-item
               a.introduction-block__link(href="/")
                 span.introduction-block__link-text На главную
             li.introduction-block__links-item
-              a.introduction-block__link(href="#")
+              button.introduction-block__button(type="submit")
                 span.introduction-block__link-text Войти
             li.introduction-block__links-item

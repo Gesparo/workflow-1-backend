@@ -4,7 +4,7 @@
   width: 100%;
   height: 100%;
   text-align: center;
-  opacity: .9;
+  //opacity: .9;
   color: #455a64;
   border-radius: 8px 8px;
   overflow: hidden;
@@ -20,7 +20,7 @@
 
   &__main {
     padding: 35px 10px 80px;
-    background-color: #fff;
+    background-color: rgba(255,255,255,0.85);;
     height: 100%;
 
     @include tablets() {
@@ -95,5 +95,154 @@
 
   &__link-text {
     font-weight: 500;
+  }
+
+  &__header {
+    margin-bottom: 30px;
+  }
+
+  &__form-group {
+    margin-bottom: 15px;
+    width: 100%;
+    position: relative;
+    padding: 0 10px;
+  }
+
+  &__input-containter {
+    border-radius: 7px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__icon-label {
+    width: 45px;
+    height: 45px;
+    display: inline-block;
+    background-color: #f0efe9;
+    color: #c4cbcd;
+    text-align: center;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+
+    &:before {
+      display: inline-block;
+      font: normal normal normal 16px/1 FontAwesome;
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      vertical-align: middle;
+    }
+
+    @extend %verticalAlignedInlineBlock;
+  }
+
+  &__input {
+    width: 100%;
+    padding-left: 45px;
+    height: 45px;
+    border: none;
+  }
+
+  &__styled-label {
+    cursor: pointer;
+
+    &:before {
+      font-family: FontAwesome;
+      display: inline-block;
+      font-size: 13px;
+      text-align: center;
+      line-height: 22px;
+      content: "\00a0";
+      border-radius: 2px;
+      background-color: #ffffff;
+      border: solid 1px #cccccc;
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+  }
+
+  &__checkbox {
+    &[type=checkbox]:checked + #{$parent}__styled-label:before {
+      content: "\f00c";
+      color: #f3f3f3;
+      background-color: #00bfa5;
+      border: solid 1px transparent;
+    }
+  }
+
+  &__styled-radio {
+    &:before {
+      font-family: FontAwesome, serif;
+      display: inline-block;
+      font-size: 28px;
+      text-align: center;
+      line-height: 20px;
+      content: "\00a0";
+      border-radius: 13px;
+      background-color: #ffffff;
+      border: solid 1px #cccccc;
+      height: 21px;
+      width: 21px;
+      margin-right: 10px;
+      vertical-align: text-bottom;
+    }
+
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: auto;
+    }
+  }
+
+  &__radio {
+    &[type=radio]:checked + #{$parent}__styled-radio:before {
+      content: "\2022";
+      color: #00bfa5;
+      background-color: #ffffff;
+    }
+  }
+
+  &__button {
+    display: block;
+    background-color: inherit;
+    color: inherit;
+    border: none;
+    box-shadow: none;
+    width: 100%;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0;
+    height: 50px;
+  }
+
+  &__form-section-header {
+    margin-bottom: 10px;
+    margin-top: 0;
+    font-size: 1rem;
+  }
+
+  &_center-aligned {
+    text-align: center;
+  }
+
+  &_user-icon {
+    &:before {
+      content: '\f007';
+    }
+  }
+
+  &_pass-icon {
+    &:before {
+      content: '\f084';
+    }
+  }
+
+  &_hidden-input {
+    display: none;
   }
 }
