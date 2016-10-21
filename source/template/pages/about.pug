@@ -4,6 +4,9 @@ block variables
     - var title = 'About me'
     - var simpled = true;
 
+block additionalHeader
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmmv9q0nPwxGRGl0l4aVtsoKxLkh45yuI")
+
 block content
     .page.page_about-me
         include ../components/header.pug
@@ -70,6 +73,8 @@ block content
 
     section.contacts
         .contacts__main
+            .contacts__map
+                .map#interactiveMap
             .contacts__block
                 header.contacts__title
                     .normal-title
