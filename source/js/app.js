@@ -215,8 +215,12 @@ $(window).on('resize', function () {
     $(this).closest('.introduction-block__content').toggleClass('introduction-block_active-card');
   });
 
-  // Temp disable submit form
+  // Temp disable submit forms
   $('#authForm').on('submit', function () {
+    return false;
+  });
+
+  $('#formFeedback').on('submit', function () {
     return false;
   });
 
