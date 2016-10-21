@@ -2,6 +2,11 @@
   font-size: 0;
   text-align: justify;
   padding-top: 15px;
+  padding-right: 20px;
+
+  @include tablets() {
+    padding-right: 0;
+  }
 
   &__block-content {
     max-width: 445px;
