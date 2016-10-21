@@ -4,7 +4,7 @@
   height: 100%;
   position: relative;
 
-  @include gradientTriangle;
+  @include gradientTriangle(#faf8f0, #faf8f0);
 
   &__information-block {
     width: 380px;
@@ -16,5 +16,15 @@
     margin-top: -120px;
     margin-left: -190px;
     color: #fff;
+  }
+
+  &_about-me {
+    &:before {
+      border-color: transparent transparent transparent #f0efe9;
+    }
+
+    &:after {
+      border-color: transparent transparent #efebe0 transparent;
+    }
   }
 }

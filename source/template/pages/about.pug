@@ -5,7 +5,7 @@ block variables
     - var simpled = true;
 
 block content
-    .page
+    .page.page_about-me
         include ../components/header.pug
         .page__main
             .page__information-block
@@ -69,22 +69,25 @@ block content
                             .skills-block__skill-text Bower
 
     section.contacts
-        .contacts__block
-            header.contacts__title
-                .normal-title
-                    span.normal-title__text Контакты
-            ul.contacts__items
-                li.contacts__item
-                    span.contacts__icon.fa.fa_skype
-                    span.contacts__text gesparo-shmaxer
-                li.contacts__item
-                    span.contacts__icon.fa.fa_envelope
-                    span.contacts__text gesparo1@gmail.com
-                li.contacts__item
-                    span.contacts__icon.fa.fa_phone
-                    span.contacts__text +7 987 842 25 69
-                li.contacts__item
-                    span.contacts__icon.fa.fa_map-marker
-                    span.contacts__text Россия, г. Оренбург
-    include ../components/footer.pug
+        .contacts__main
+            .contacts__block
+                header.contacts__title
+                    .normal-title
+                        span.normal-title__text Контакты
+                ul.contacts__items
+                    li.contacts__item
+                        span.contacts__icon.fa.fa_skype
+                        span.contacts__text gesparo-shmaxer
+                    li.contacts__item
+                        span.contacts__icon.fa.fa_envelope
+                        span.contacts__text gesparo1@gmail.com
+                    li.contacts__item
+                        span.contacts__icon.fa.fa_phone
+                        span.contacts__text +7 987 842 25 69
+                    li.contacts__item
+                        span.contacts__icon.fa.fa_map-marker
+                        span.contacts__text Россия, г. Оренбург
+        .contacts__footer
+            include ../components/footer.pug
+
     include ../components/popup-menu

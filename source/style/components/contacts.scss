@@ -1,10 +1,35 @@
 .contacts {
-  height: 830px;
+  height: 1175px;
   width: 100%;
   background-image: url("../img/map.png");
   background-size: cover;
+  position: relative;
 
-  display: flex;
+  @include desktop() {
+    height: 990px;
+  }
+
+  @include tablets() {
+    height: 875px;
+  }
+
+  @include phones() {
+    height: 925px;
+  }
+
+  &__main {
+    display: flex;
+    padding-bottom: 150px;
+    height: 100%;
+
+    @include tablets() {
+      padding-bottom: 220px;
+    }
+
+    @include phones() {
+      display: block;
+    }
+  }
 
   &__block {
     margin: auto;
@@ -41,5 +66,13 @@
   &__text {
     margin-left: 35px;
     display: block;
+  }
+
+  &__footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: .9;
   }
 }
