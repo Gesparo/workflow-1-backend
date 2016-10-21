@@ -202,8 +202,22 @@ $(window).on('resize', function () {
 ;(function() {
   'use strict';
 
+  // Authorization block (flip)
   $('.auth-block__button').on('click', function() {
+    $(this).hide();
     $('.introduction-block__content').toggleClass('introduction-block_active-card');
+  });
+
+  $('#backHome').on('click', function (e) {
+    e.preventDefault();
+
+    $('.auth-block__button').show();
+    $(this).closest('.introduction-block__content').toggleClass('introduction-block_active-card');
+  });
+
+  // Temp disable submit form
+  $('#authForm').on('submit', function () {
+    return false;
   });
 
   $(window).on('scroll', function () {
