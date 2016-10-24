@@ -172,7 +172,7 @@ $(window).on('load', function () {
     links.each(function () {
       var currLink = $(this);
       var refElement = $(currLink.attr("href"));
-      if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+      if (refElement.position().top - 100 <= scrollPos && refElement.position().top - 100 + refElement.height() > scrollPos) {
         items.removeClass("articles-nav_active");
         currLink.parent().addClass("articles-nav_active");
       }
