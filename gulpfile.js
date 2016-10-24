@@ -23,7 +23,8 @@ $.gulp.task('default', $.gulp.series(
   'clean',
   $.gulp.parallel(
     'sass',
-    'pug',
+      // comment if use node server
+    //'pug',
     'js:foundation',
     'js:process',
     'copy:image',

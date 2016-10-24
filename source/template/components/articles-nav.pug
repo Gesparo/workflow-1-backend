@@ -1,14 +1,15 @@
 nav.articles-nav
     ul.articles-nav__items
-        li.articles-nav__item
-            a.articles-nav__link(href="#article1")
-                span.articles-nav__text Самое важное в SASS
-        li.articles-nav__item
+        each val, index in articlesArr
+            li.articles-nav__item
+                a.articles-nav__link(href="#article" + (index + 1))
+                    span.articles-nav__text= val.title
+        //li.articles-nav__item
             a.articles-nav__link(href="#article2")
                 span.articles-nav__text Приёмы в вёрстке, без которых  не обходится ни один сайт
-        li.articles-nav__item
+        //li.articles-nav__item
             a.articles-nav__link(href="#article3")
                 span.articles-nav__text Самый необходимый набор Gulp плагинов
-        li.articles-nav__item
+        //li.articles-nav__item
             a.articles-nav__link(href="#article4")
                 span.articles-nav__text Почему я выбрал Jade
