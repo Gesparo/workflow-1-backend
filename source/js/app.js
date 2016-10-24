@@ -323,6 +323,46 @@ var map = (function () {
   };
 })();
 
+var formValidation = (function () {
+  var form,
+      errorClass,
+      errorContainer;
+  
+  var init = function (formVar, errorClassName, appendErrorContainer) {
+    form = formVar;
+    errorClass = errorClassName;
+    errorContainer = appendErrorContainer;
+    
+    var inputs = formVar.find('input, textarea').not('input[type="radio"], input[type="checkbox"]'),
+        valid = true;
+
+    // vadidate
+    inputs.each(function (index, value) {
+      var valueObj = $(value);
+
+      if( !valueObj.val()) {
+        valueObj.closest('.' + errorContainer).addClass(errorClass);
+
+        valid = false;
+      }
+    });
+
+    inputs.on('change', function () {
+      $(this).closest('.' + errorContainer).removeClass(errorClass);
+    });
+
+    form.on('reset', function () {
+      inputs.closest('.' + errorContainer).removeClass(errorClass);
+    });
+
+    return valid;
+  };
+  
+  return {
+    validate : init
+  };
+})();
+
 $(window).on('resize', function () {
   if( $('.feedback').length ) blur.init();
 });
@@ -426,15 +466,17 @@ $(window).on('load', function () {
         },
         sendStr = JSON.stringify(formData);
 
-    var xhr = new XMLHttpRequest();
+    if( formValidation.validate($this, 'feedback_error-input', 'feedback__form-group') ) {
+      var xhr = new XMLHttpRequest();
 
-    xhr.open('POST', action);
+      xhr.open('POST', action);
 
-    xhr.setRequestHeader('Content-type', 'application/json');
-    xhr.send(sendStr);
+      xhr.setRequestHeader('Content-type', 'application/json');
+      xhr.send(sendStr);
 
-    // clear form
-    $this.trigger('reset');
+      // clear form
+      $this.trigger('reset');
+    }
 
     return false;
   }
@@ -469,15 +511,17 @@ $(window).on('load', function () {
       }
     });*/
 
-    var xhr = new XMLHttpRequest();
+    if( formValidation.validate($this, 'introduction-block_error-input', 'introduction-block__input-containter') ) {
+      var xhr = new XMLHttpRequest();
 
-    xhr.open('POST', action);
+      xhr.open('POST', action);
 
-    xhr.setRequestHeader('Content-type', 'application/json');
-    xhr.send(sendStr);
+      xhr.setRequestHeader('Content-type', 'application/json');
+      xhr.send(sendStr);
 
-    // clear form
-    $this.trigger('reset');
+      // clear form
+      $this.trigger('reset');
+    }
 
     return false;
   }
