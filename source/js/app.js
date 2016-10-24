@@ -327,39 +327,6 @@ $(window).on('resize', function () {
   if( $('.feedback').length ) blur.init();
 });
 
-// When the window has finished loading create our google map below
-/*google.maps.event.addDomListener(window, 'load', init);
-
-function init() {
-  // Basic options for a simple Google Map
-  // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-  var mapOptions = {
-    // How zoomed in you want the map to start at (always required)
-    zoom: 11,
-
-    // The latitude and longitude to center the map (always required)
-    center: new google.maps.LatLng(40.6700, -73.9400), // New York
-
-    // How you would like to style the map.
-    // This is where you would paste any style found on Snazzy Maps.
-    styles: [{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#e0efef"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"hue":"#1900ff"},{"color":"#c0e8e8"}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":100},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"visibility":"on"},{"lightness":700}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#7dcdcd"}]}]
-  };
-
-  // Get the HTML DOM element that will contain your map
-  // We are using a div with id="map" seen below in the <body>
-  var mapElement = document.getElementById('interactiveMap');
-
-  // Create the Google Map using our element and options defined above
-  var map = new google.maps.Map(mapElement, mapOptions);
-
-  // Let's also add a marker while we're at it
-  var marker = new google.maps.Marker({
-    position: new google.maps.LatLng(40.6700, -73.9400),
-    map: map,
-    title: 'Snazzy!'
-  });
-}*/
-
 if( document.getElementById('interactiveMap') ) {
   google.maps.event.addDomListener(window, 'load', map.init());
 }
@@ -370,8 +337,6 @@ $(window).on('load', function () {
 
 ;(function() {
   'use strict';
-
-
 
   //Preloader
   if( $('.preloader').length ) preloader.init();
@@ -390,13 +355,9 @@ $(window).on('load', function () {
   });
 
   // Temp disable submit forms
-  $('#authForm').on('submit', function () {
-    return false;
-  });
+  $('#authForm').on('submit', submitAuthForm);
 
-  $('#formFeedback').on('submit', function () {
-    return false;
-  });
+  $('#formFeedback').on('submit', submitContactForm);
 
   $(window).on('scroll', function () {
     var $this = $(this),
@@ -454,6 +415,72 @@ $(window).on('load', function () {
     $('.header__menu').find('.social-links__link').show();
 
   });
+
+  function submitContactForm(event) {
+    var $this = $(this),
+        action = $this.attr('action'),
+        formData = {
+          name : $this.find('input[name="name"]').val(),
+          email  : $this.find('input[name="email"]').val(),
+          comment : $this.find('textarea[name="comment"]').val()
+        },
+        sendStr = JSON.stringify(formData);
+
+    var xhr = new XMLHttpRequest();
+
+    xhr.open('POST', action);
+
+    xhr.setRequestHeader('Content-type', 'application/json');
+    xhr.send(sendStr);
+
+    // clear form
+    $this.trigger('reset');
+
+    return false;
+  }
+
+  function submitAuthForm(event) {
+    var $this = $(this),
+        action = $this.attr('action'),
+        formData = {
+          login : $this.find('input[name="login"]').val(),
+          password  : $this.find('input[name="password"]').val(),
+          confirmPerson : $this.find('input[name="confirmPerson"]').val(),
+          secondConfirmPerson : $this.find('input[name="secondConfirmPerson"]').val()
+        },
+        sendStr = JSON.stringify(formData);
+
+    /* migth work, but don't work
+    $.ajax({
+      type: 'POST',
+      dataType: 'json',
+      url: action,
+      /!*beforeSend: function (x) {
+        if (x && x.overrideMimeType) {
+          x.overrideMimeType("application/json;charset=UTF-8");
+        }
+      },*!/
+      data: sendStr,
+      success: function (respond, textStatus, jqXHR) {
+        console.log('Success form respont: ', respond);
+      },
+      error: function (jqXHR, textStatus, errorThrown) {
+        console.log('Fail to submit form');
+      }
+    });*/
+
+    var xhr = new XMLHttpRequest();
+
+    xhr.open('POST', action);
+
+    xhr.setRequestHeader('Content-type', 'application/json');
+    xhr.send(sendStr);
+
+    // clear form
+    $this.trigger('reset');
+
+    return false;
+  }
 
 
   function navScroll(event){

@@ -2,6 +2,10 @@ var express = require('express');
 var fs = require('fs');
 var pug = require('pug');
 var mongoose = require('mongoose');
+var bodyParser = require('body-parser');
+
+// parser for json
+var jsonParser = bodyParser.json();
 
 // connect to memory db
 mongoose.connect('mongodb://localhost/test');
@@ -10,6 +14,12 @@ var Article = mongoose.model('Article', {
   title: String,
   date: String,
   body: String
+});
+
+var Feedback = mongoose.model('Feedback', {
+  name : String,
+  email : String,
+  comment : String
 });
 
 // find first article
@@ -64,22 +74,48 @@ app.get('/blog.html', function (req, res) {
   );
 });
 
+app.post('/authorization', jsonParser,  function (req, res) {
+  if(
+        req.body &&
+        'admin' == req.body.login &&
+        'admin' == req.body.password &&
+        'on' == req.body.confirmPerson &&
+        'y' == req.body.secondConfirmPerson
+    ) {
+    res.send('success');
+  } else {
+    res.send('error');
+  }
+});
+
+app.post('/feedback', jsonParser,  function (req, res) {
+  if( saveInfoIntoDB(Feedback, req.body) ) {
+    res.send('success');
+  } else {
+    res.send('error');
+  }
+
+  Feedback.findOne({}, function () {
+   console.log(arguments);
+   });
+});
+
 // listen on specific port
 app.listen(7777, function () {
   console.log('Server start. Listening on port 7777!');
 });
 
 /**
- * Save article into db
- * @param ArticleClass - mongoose article model
+ * Save into db
+ * @param Class - mongoose model
  * @param data - fields
  */
-function saveArticle(ArticleClass, data) {
-  new ArticleClass(data).save(function (error) {
+function saveInfoIntoDB(Class, data) {
+  new Class(data).save(function (error) {
     if( error ) {
-      console.log('Fail to save article');
+      console.log('Fail to save data');
     } else {
-      console.log('Article saved successfully');
+      console.log('Data saved successfully');
     }
   });
 }

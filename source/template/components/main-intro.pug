@@ -31,7 +31,7 @@ main.main-intro
             li.introduction-block__links-item
               a.introduction-block__link(href="blog.html")
                 span.introduction-block__link-text Блог
-        form.introduction-block__back(method="POST" id="authForm")
+        form.introduction-block__back(method="POST" action="/authorization" id="authForm")
           .introduction-block__main
             .introduction-block__header
               .normal-title
@@ -43,7 +43,7 @@ main.main-intro
             .introduction-block__form-group
               .introduction-block__input-containter
                 label.introduction-block__icon-label.introduction-block_pass-icon(for="formPassword")
-                input.introduction-block__input(type="password" name="login" placeholder="Пароль" id="formPassword")
+                input.introduction-block__input(type="password" name="password" placeholder="Пароль" id="formPassword")
             .introduction-block__form-group
               input.introduction-block__checkbox.introduction-block_hidden-input(type="checkbox" name="confirmPerson" id="confirmPerson")
               label.introduction-block__styled-label(for="confirmPerson") Я человек
