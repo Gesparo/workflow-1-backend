@@ -14,6 +14,8 @@ $(window).on('load', function () {
 ;(function() {
   'use strict';
 
+  tabsSwitcher.init();
+
   //Preloader
   if( $('.preloader').length ) preloader.init();
 
