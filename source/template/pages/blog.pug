@@ -1,7 +1,7 @@
 extends ../_layout
 
 block variables
-    //- var title = 'Welcome'
+    - var title = 'Welcome'
 
 block content
     .page-top
@@ -15,19 +15,10 @@ block content
             include ../components/articles-nav.pug
 
             .articles
-              each val, index in articlesArr
-                article.article(id="article" + (index + 1))
-                  h2.article__header= val.title
-                  .article__date
-                    span.article__date-text= val.date
-                  .article__content
-                    each subval in val.body
-                      p.article__paragraph= subval
-
-                //include ../articles/article1
-                //include ../articles/article2
-                //include ../articles/article3
-                //include ../articles/article4
+                include ../articles/article1
+                include ../articles/article2
+                include ../articles/article3
+                include ../articles/article4
 
     include ../components/footer.pug
     include ../components/popup-menu

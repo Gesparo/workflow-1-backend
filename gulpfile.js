@@ -24,7 +24,7 @@ $.gulp.task('default', $.gulp.series(
   $.gulp.parallel(
     'sass',
       // comment if use node server
-    //'pug',
+    'pug',
     'js:foundation',
     'js:process',
     'copy:image',
