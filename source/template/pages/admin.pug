@@ -19,7 +19,7 @@ html
     script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
     <![endif]-->
 
-  body
+  body.admin-panel
     .admin-header
       h1.admin-header__title.
         Панель администрирования
@@ -36,3 +36,6 @@ html
           li.admin-tabs__tab
             .admin-tabs__tab-text= val
 
+    .admin-content
+      .admin-content__tab-content.admin-content_adtive-tab
+        include ../admin_pages/about_me

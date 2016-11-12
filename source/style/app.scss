@@ -77,6 +77,13 @@ a {
   height: 100%;
 }
 
+.admin-panel {
+  background-image: url('../img/mountains1200.png');
+  background-position: 50% 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 @import "components/preloader";
 @import "components/header-intro";
 @import "components/auth-block";
@@ -117,3 +124,4 @@ a {
 // admin panel
 @import "components/admin/admin-header";
 @import "components/admin/admin-tabs";
+@import "components/admin/admin-content";
