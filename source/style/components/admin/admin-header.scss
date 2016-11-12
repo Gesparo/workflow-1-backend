@@ -1,0 +1,40 @@
+.admin-header {
+  height: 110px;
+  padding: 35px 30px;
+  text-align: right;
+  background-color: #00bfa5;
+  color: #ffffff;
+
+  @extend %clearfix;
+
+  &__title {
+    float: left;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 28px;
+    font-weight: 500;
+    margin: 0;
+    text-align: left;
+  }
+
+  &__link-block {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    text-align: left;
+    font-weight: 500;
+
+    @extend %verticalAlignedInlineBlock;
+  }
+
+  &__link {
+    display: inline-block;
+    vertical-align: middle;
+    color: #ffffff;
+    text-decoration: underline;
+
+    &:hover, &:active, &:focus {
+      text-decoration: none;
+    }
+  }
+}
