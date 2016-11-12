@@ -1,0 +1,35 @@
+.admin-tabs {
+  height: 60px;
+  text-align: left;
+  background-color: #f0efe9;
+  font-size: 0;
+
+  &__tab {
+    width: 180px;
+    height: 100%;
+    text-align: center;
+    display: inline-block;
+    border-right: 2px solid white;
+    cursor: pointer;
+
+    &:hover, &:focus, &:active {
+      background-color: #fff;
+      color: #44d0bd;
+      border-right: none;
+    }
+
+    @extend %verticalAlignedInlineBlock;
+  }
+
+  &__tab-text {
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  &_active-tab {
+    background-color: #fff;
+    color: #44d0bd;
+  }
+}

@@ -27,3 +27,12 @@ html
         a.admin-header__link(href='/').
           Вернуться на сайт
 
+    ul.admin-tabs
+      each val in ['Tab 1', 'Tab 2', 'Tab 3', 'Tab 4']
+        if val == 'Tab 1'
+          li.admin-tabs__tab.admin-tabs_active-tab
+            .admin-tabs__tab-text= val
+        else
+          li.admin-tabs__tab
+            .admin-tabs__tab-text= val
+
