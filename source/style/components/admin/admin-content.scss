@@ -93,7 +93,34 @@
     }
   }
 
+  &__form-upload {
+    cursor: pointer;
+
+    @extend %verticalAlignedInlineBlock;
+  }
+
+  &__upload-image {
+    vertical-align: middle;
+  }
+
+  &__upload-text {
+    color: #00bfa5;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+  }
+
   &_adtive-tab {
     display: block;
+  }
+
+  &_hidden {
+    display: none;
+  }
+
+  &_fixed-button {
+    position: fixed;
+    bottom: 40px;
+    left: 30px;
   }
 }
