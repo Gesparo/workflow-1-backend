@@ -9,6 +9,7 @@ module.exports = [
   './source/js/formValidation.js',
   './source/js/authForm.js',
   './source/js/tabs.js',
+  './source/js/adminFormAboutMe.js',
   './source/js/app.js'
 
 ];

@@ -1,74 +1,131 @@
 h2.admin-content__title.
   Страница "Обо мне"
-form.admin-content__form
+form#admin-about-me.admin-content__form
   .admin-content__row
     .admin-content__skills-block
       h3.admin-content__skills-title.
         Frontend
       ul.admin-content__skills-group
-        li.admin-content__skill-item
-          label.admin-content__skill-name(for="html_input").
-            HTML
-          input.admin-content__skill-input(placeholder="0" id="html_input" name="html")
-          .admin-content__skill-sign.
-            %
-        li.admin-content__skill-item
-          label.admin-content__skill-name(for="css_input").
-            CSS
-          input.admin-content__skill-input(placeholder="0" id="css_input" name="css")
-          .admin-content__skill-sign.
-            %
-        li.admin-content__skill-item
-          label.admin-content__skill-name(for="javascript_input").
-            JavaScript
-          input.admin-content__skill-input(placeholder="0" id="javascript_input" name="javascript")
-          .admin-content__skill-sign.
-            %
+        each val, index in skills
+          case val.name
+            when 'html'
+              li.admin-content__skill-item
+                label.admin-content__skill-name(for="html_input")=  val.display_name
+                input.admin-content__skill-input(placeholder="0" id="html_input" name=val.name value=val.value )
+                .admin-content__skill-sign.
+                  %
+            when 'css'
+              li.admin-content__skill-item
+                label.admin-content__skill-name(for="css_input")=  val.display_name
+                input.admin-content__skill-input(placeholder="0" id="css_input" name=val.name value=val.value )
+                .admin-content__skill-sign.
+                  %
+            when 'javascript'
+              li.admin-content__skill-item
+                label.admin-content__skill-name(for="javascript_input")=  val.display_name
+                input.admin-content__skill-input(placeholder="0" id="javascript_input"  name=val.name value=val.value )
+                .admin-content__skill-sign.
+                  %
+
+
+
+        //li.admin-content__skill-item
+        //  label.admin-content__skill-name(for="css_input").
+        //    CSS
+        //  input.admin-content__skill-input(placeholder="0" id="css_input" name="css")
+        //  .admin-content__skill-sign.
+        //    %
+        //li.admin-content__skill-item
+        //  label.admin-content__skill-name(for="javascript_input").
+        //    JavaScript
+        //  input.admin-content__skill-input(placeholder="0" id="javascript_input" name="javascript")
+        //  .admin-content__skill-sign.
+        //    %
     .admin-content__skills-block
       h3.admin-content__skills-title.
         Workflow
       ul.admin-content__skills-group
-        li.admin-content__skill-item
-          label.admin-content__skill-name(for="git_input").
-            Git
-          input.admin-content__skill-input(placeholder="0" id="git_input" name="html")
-          .admin-content__skill-sign.
-            %
-        li.admin-content__skill-item
-          label.admin-content__skill-name(for="gulp_input").
-            Gulp
-          input.admin-content__skill-input(placeholder="0" id="gulp_input" name="gulp")
-          .admin-content__skill-sign.
-            %
-        li.admin-content__skill-item
-          label.admin-content__skill-name(for="bower_input").
-            Bower
-          input.admin-content__skill-input(placeholder="0" id="bower_input" name="bower")
-          .admin-content__skill-sign.
-            %
+        each val, index in skills
+          case val.name
+            when 'git'
+              li.admin-content__skill-item
+                label.admin-content__skill-name(for="git_input")=  val.display_name
+                input.admin-content__skill-input(placeholder="0" id="git_input" name=val.name value=val.value )
+                .admin-content__skill-sign.
+                  %
+            when 'gulp'
+              li.admin-content__skill-item
+                label.admin-content__skill-name(for="gulp_input")=  val.display_name
+                input.admin-content__skill-input(placeholder="0" id="gulp_input" name=val.name value=val.value )
+                .admin-content__skill-sign.
+                  %
+            when 'bower'
+              li.admin-content__skill-item
+                label.admin-content__skill-name(for="bower_input")=  val.display_name
+                input.admin-content__skill-input(placeholder="0" id="bower_input" name=val.name value=val.value )
+                .admin-content__skill-sign.
+                  %
+        //li.admin-content__skill-item
+        //  label.admin-content__skill-name(for="git_input").
+        //    Git
+        //  input.admin-content__skill-input(placeholder="0" id="git_input" name="git")
+        //  .admin-content__skill-sign.
+        //    %
+        //li.admin-content__skill-item
+        //  label.admin-content__skill-name(for="gulp_input").
+        //    Gulp
+        //  input.admin-content__skill-input(placeholder="0" id="gulp_input" name="gulp")
+        //  .admin-content__skill-sign.
+        //    %
+        //li.admin-content__skill-item
+        //  label.admin-content__skill-name(for="bower_input").
+        //    Bower
+        //  input.admin-content__skill-input(placeholder="0" id="bower_input" name="bower")
+        //  .admin-content__skill-sign.
+        //    %
   .admin-content__row
     .admin-content__skills-block
       h3.admin-content__skills-title.
         Backend
       ul.admin-content__skills-group
-        li.admin-content__skill-item
-          label.admin-content__skill-name(for="php_input").
-            PHP
-          input.admin-content__skill-input(placeholder="0" id="php_input" name="php")
-          .admin-content__skill-sign.
-            %
-        li.admin-content__skill-item
-          label.admin-content__skill-name(for="nodejs_input").
-            Node.js
-          input.admin-content__skill-input(placeholder="0" id="nodejs_input" name="nodejs")
-          .admin-content__skill-sign.
-            %
-        li.admin-content__skill-item
-          label.admin-content__skill-name(for="mongodb_input").
-            MongoDB
-          input.admin-content__skill-input(placeholder="0" id="mongodb_input" name="mongodb")
-          .admin-content__skill-sign.
-            %
+        each val, index in skills
+          case val.name
+            when 'php'
+              li.admin-content__skill-item
+                label.admin-content__skill-name(for="php_input")=  val.display_name
+                input.admin-content__skill-input(placeholder="0" id="php_input" name=val.name value=val.value )
+                .admin-content__skill-sign.
+                  %
+            when 'nodejs'
+              li.admin-content__skill-item
+                label.admin-content__skill-name(for="nodejs_input")=  val.display_name
+                input.admin-content__skill-input(placeholder="0" id="nodejs_input" name=val.name value=val.value )
+                .admin-content__skill-sign.
+                  %
+            when 'mongodb'
+              li.admin-content__skill-item
+                label.admin-content__skill-name(for="mongodb_input")=  val.display_name
+                input.admin-content__skill-input(placeholder="0" id="mongodb_input" name=val.name value=val.value )
+                .admin-content__skill-sign.
+                  %
+        //li.admin-content__skill-item
+        //  label.admin-content__skill-name(for="php_input").
+        //    PHP
+        //  input.admin-content__skill-input(placeholder="0" id="php_input" name="php")
+        //  .admin-content__skill-sign.
+        //    %
+        //li.admin-content__skill-item
+        //  label.admin-content__skill-name(for="nodejs_input").
+        //    Node.js
+        //  input.admin-content__skill-input(placeholder="0" id="nodejs_input" name="nodejs")
+        //  .admin-content__skill-sign.
+        //    %
+        //li.admin-content__skill-item
+        //  label.admin-content__skill-name(for="mongodb_input").
+        //    MongoDB
+        //  input.admin-content__skill-input(placeholder="0" id="mongodb_input" name="mongodb")
+        //  .admin-content__skill-sign.
+        //    %
 
   button.admin-content__form-button(type="submit").
     Добавить

@@ -19,6 +19,8 @@ $(window).on('load', function () {
 
   tabsSwitcher.init();
 
+  adminFormAboutMe.init();
+
   //Preloader
   if( $('.preloader').length ) preloader.init();
 
