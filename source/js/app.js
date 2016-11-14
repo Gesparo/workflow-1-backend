@@ -14,6 +14,9 @@ $(window).on('load', function () {
 ;(function() {
   'use strict';
 
+  // Auth submit
+  authForm.init();
+
   //Preloader
   if( $('.preloader').length ) preloader.init();
 
@@ -31,7 +34,7 @@ $(window).on('load', function () {
   });
 
   // Temp disable submit forms
-  $('#authForm').on('submit', submitAuthForm);
+/*  $('#authForm').on('submit', submitAuthForm);*/
 
   $('#formFeedback').on('submit', submitContactForm);
 

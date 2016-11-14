@@ -7,5 +7,6 @@ module.exports = [
   './source/js/preloader.js',
   './source/js/map.js',
   './source/js/formValidation.js',
+  './source/js/authForm.js',
   './source/js/app.js'
 ];
