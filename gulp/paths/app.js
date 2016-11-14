@@ -10,6 +10,7 @@ module.exports = [
   './source/js/authForm.js',
   './source/js/tabs.js',
   './source/js/adminFormAboutMe.js',
+  './source/js/adminFormBlog.js',
   './source/js/app.js'
 
 ];

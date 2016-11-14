@@ -15,10 +15,19 @@ block content
             include ../components/articles-nav.pug
 
             .articles
-                include ../articles/article1
-                include ../articles/article2
-                include ../articles/article3
-                include ../articles/article4
+                each val, index in articles
+                    article.article(id="article#{val.id}")
+                        h2.article__header= val.title
+                        .article__date
+                            span.article__date-text= val.date
+                        .article__content
+                            p.article__paragraph= val.content
+
+
+                //include ../articles/article1
+                //include ../articles/article2
+                //include ../articles/article3
+                //include ../articles/article4
 
     include ../components/footer.pug
     include ../components/popup-menu
