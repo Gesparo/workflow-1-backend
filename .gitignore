@@ -11,6 +11,8 @@
 *.swp
 *.vi
 *~
+vendor
+composer.phar
 
 # OS or Editor folders
 *.sublime-grunt.cache
