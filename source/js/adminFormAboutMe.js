@@ -24,7 +24,7 @@ var adminFormAboutMe = (function () {
       _ajaxTerm(sendObject).then(function (result) {
         if( result['status'] == 'error' )
         {
-          if(result['error_mgs']) {
+          if(result['error_msg']) {
             alert(result['error_msg']);
           }
           else if(result['error_inputs'])
