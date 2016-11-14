@@ -1,7 +1,7 @@
 extends ../_layout
 
 block variables
-    - var title = 'Works'
+
     - var simpled = true;
 
 block content
@@ -11,7 +11,6 @@ block content
             .page__information-block
                 include ../components/person.pug
 
-
     section.slide-block
         header.slide-block__header
             .large-title
@@ -20,59 +19,60 @@ block content
         .site-slider
             .site-slider__present-site
                 ul.site-slider__present-list
-                    li.site-slider__present-item
-                        img.site-slider__present-img(src="assets/img/work-1.png")
-                    li.site-slider__present-item.site-slider__active-slide
-                        img.site-slider__present-img(src="assets/img/work-2.png")
-                    li.site-slider__present-item
-                        img.site-slider__present-img(src="assets/img/work-3.png")
+                    each val, index in works
+                        if index == 0
+                            li.site-slider__present-item.site-slider__active-slide
+                                img.site-slider__present-img(src="assets/img/#{val.image_name}")
+                        else
+                            li.site-slider__present-item
+                                img.site-slider__present-img(src="assets/img/#{val.image_name}")
 
             .site-introduction.site-slider__site-introduction
                 ul.site-introduction__list
-                    li.site-introduction__item
-                        .site-introduction__item-content
-                            .site-introduction__header
-                                .normal-title
-                                    span.normal-title__text Сайт 1
-                            .site-introduction__used-technologies
-                                span.site-introduction__used-technologies-text HTML, CSS, JavaScript
-                            a.site-introduction__link Посмотреть сайт
-                    li.site-introduction__item.site-introduction_active
-                        .site-introduction__item-content
-                            .site-introduction__header
-                                .normal-title
-                                    span.normal-title__text Сайт школы онлайн образования
-                            .site-introduction__used-technologies
-                                span.site-introduction__used-technologies-text HTML, CSS, JavaScript
-                            a.site-introduction__link Посмотреть сайт
-                    li.site-introduction__item
-                        .site-introduction__item-content
-                            .site-introduction__header
-                                .normal-title
-                                    span.normal-title__text Сайт 2
-                            .site-introduction__used-technologies
-                                span.site-introduction__used-technologies-text HTML, CSS, JavaScript
-                            a.site-introduction__link Посмотреть сайт
+                    each val, index in works
+                        if index == 0
+                            li.site-introduction__item.site-introduction_active
+                                .site-introduction__item-content
+                                    .site-introduction__header
+                                        .normal-title
+                                            span.normal-title__text= val.name
+                                    .site-introduction__used-technologies
+                                        span.site-introduction__used-technologies-text= val.technologies
+                                    a.site-introduction__link Посмотреть сайт
+                        else
+                            li.site-introduction__item
+                                .site-introduction__item-content
+                                    .site-introduction__header
+                                        .normal-title
+                                            span.normal-title__text= val.name
+                                    .site-introduction__used-technologies
+                                        span.site-introduction__used-technologies-text= val.technologies
+                                    a.site-introduction__link Посмотреть сайт
 
             .site-slider__nav
                 .site-slider__nav-prev
                     .site-slider__nav-wrap
                         ul.site-slider__nav-list
-                            li.site-slider__nav-item
-                                img.site-slider__nav-prev-img(src="assets/img/work-1.png")
-                            li.site-slider__nav-item
-                                img.site-slider__nav-prev-img(src="assets/img/work-2.png")
-                            li.site-slider__nav-item.site-slider__active-slide
-                                img.site-slider__nav-prev-img(src="assets/img/work-3.png")
+                            each val, index in works
+                                if index == 4
+                                    li.site-slider__nav-item
+                                        img.site-slider__nav-prev-img(src="assets/img/#{val.image_name}")
+                                else
+                                    li.site-slider__nav-item.site-slider__active-slide
+                                        img.site-slider__nav-prev-img(src="assets/img/#{val.image_name}")
+
                 .site-slider__nav-next
                     .site-slider__nav-wrap
                         ul.site-slider__nav-list
-                            li.site-slider__nav-item.site-slider__active-slide
-                                img.site-slider__nav-next-img(src="assets/img/work-1.png")
-                            li.site-slider__nav-item
-                                img.site-slider__nav-next-img(src="assets/img/work-3.png")
-                            li.site-slider__nav-item
-                                img.site-slider__nav-next-img(src="assets/img/work-2.png")
+                            each val, index in works
+                                if index == 0
+                                    li.site-slider__nav-item.site-slider__active-slide
+                                        img.site-slider__nav-next-img(src="assets/img/#{val.image_name}")
+                                else
+                                    li.site-slider__nav-item
+                                        img.site-slider__nav-next-img(src="assets/img/#{val.image_name}")
+
+
 
     include ../components/feedback
     include ../components/footer.pug
