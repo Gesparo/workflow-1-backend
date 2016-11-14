@@ -14,6 +14,8 @@
 vendor
 composer.phar
 
+phpserver/cache
+
 # OS or Editor folders
 *.sublime-grunt.cache
 *.sublime-project
