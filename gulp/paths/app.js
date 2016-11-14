@@ -8,5 +8,7 @@ module.exports = [
   './source/js/map.js',
   './source/js/formValidation.js',
   './source/js/authForm.js',
+  './source/js/tabs.js',
   './source/js/app.js'
+
 ];

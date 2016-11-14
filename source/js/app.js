@@ -17,6 +17,8 @@ $(window).on('load', function () {
   // Auth submit
   authForm.init();
 
+  tabsSwitcher.init();
+
   //Preloader
   if( $('.preloader').length ) preloader.init();
 
